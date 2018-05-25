@@ -1,0 +1,5 @@
+index.html
+goodslist.html 点击手机
+forsale2.html	点击上方的弹窗
+login 点击登录
+register 注册
