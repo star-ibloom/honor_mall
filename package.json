@@ -1,0 +1,17 @@
+{
+  "name": "honor_mall",
+  "version": "0.1.0",
+  "description": "honor_mall_byyb",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-sass": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "star_ibloom",
+  "license": "ISC"
+}

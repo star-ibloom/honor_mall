@@ -1,0 +1,43 @@
+body {
+  overflow-x: hidden;
+  margin: 0 auto;
+  background-color: #edd7d4; }
+
+#top {
+  width: 100%;
+  position: relative; }
+
+#top > img {
+  margin: 0 auto;
+  /* width: 1364px; 
+    height: 56px; */
+  text-align: center; }
+
+#toplist {
+  position: absolute;
+  float: right;
+  right: 19%;
+  top: 0px; }
+
+#toplist li {
+  float: left;
+  padding: 25px 6px 0px;
+  font-size: 14px; }
+
+#toplist li a {
+  color: #094151; }
+
+#toplist li a:hover {
+  text-decoration: underline; }
+
+#toplist li img {
+  width: 9px;
+  height: 10px; }
+
+#sec {
+  width: 100%; }
+
+#sec img {
+  /* height:484px;
+    width: 1364px; */
+  margin: 0 auto; }

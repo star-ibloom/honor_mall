@@ -1,0 +1,491 @@
+.hide, .hidden {
+    display: none;
+}  
+.i-mall-prompt {
+    padding: 14px 20px 0 16px;
+    color: #3a3a3a;
+    .user-info{
+        .user-info {
+            padding-left: 20px;
+            width: 188px;
+            overflow: hidden;
+        }
+    }
+}
+.user-canvas {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .canvas-right {
+        border-radius: 0 45px 45px 0;
+    }
+    .canvas-bg {
+        width: 90px;
+        height: 90px;
+        display: block;
+    }
+    .canvas-left, .user-canvas .canvas-right {
+        width: 45px;
+        height: 90px;
+        overflow: hidden;
+        position: relative;
+        float: left;
+        z-index: 4;
+        background: #dfdfdf;
+    }
+    .canvas-right div {
+        border-radius: 0 45px 45px 0;
+        background: -webkit-gradient(linear,0 0,right 0,from(#f58555),to(#f05c20));
+    }
+    .canvas-left div, .user-canvas .canvas-right div {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 45px;
+        height: 90px;
+        border-radius: 45px 0 0 45px;
+        background: #f05c20;
+        background: -webkit-gradient(linear,0 0,right 0,from(#f05c20),to(#f58555));
+        
+}
+.i-mall-uc {
+    width: 340px;
+    padding: 32px 0 0;
+    overflow: hidden;
+    line-height: 1;
+}
+.user-head {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    span{
+        width: 20px;
+        height: 20px;
+        display: block;
+        position: absolute;
+        z-index: 20;
+        left: 3px;
+        bottom: 1px;//背景换了
+        background: url(../../images/echannel/index/icon12.png?20170620) no-repeat;
+    }
+}
+}
+.fl, .left, .left-area {
+    float: left;
+}
+.shortcut{
+    // background: red;
+    min-width: 1200px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    .dropdown-i-mall {
+        width: 340px;
+        color: #3a3a3a;
+    }
+    a{
+        color: #a4a4a4;
+    }
+    a:hover{
+        color: #00b5e2!important;
+    }
+    li{
+
+        float: left;
+        padding: 0 8px;
+        position: relative;
+        &:first-child{
+            padding-left: 0;
+        }
+        &:before{
+            content: "";
+            width: 1px;
+            height: 10px;
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            background: #e4e4e4;
+        }
+    
+    }
+    .s-dropdown{
+        position: relative;
+        z-index: 310;
+        margin: 0 -8px;
+        height: 30px;
+        .h-wide{
+            padding: 0 18px 0 12px;
+        }
+        .h{
+            position: relative;
+            height: 30px;
+        }
+        .icon-minicart {
+            position: relative;
+            padding-left: 28px;
+            &::before {
+                content: "";
+                width: 14px;
+                height: 14px;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(https://res.vmallres.com/20180504/images/echannel/icon-common.png);
+            }
+        }
+        .b {
+            display: none;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            background: #fff;
+            border: 1px solid #ededed;
+        }
+        .icon-dropdown {
+            position: relative;
+            padding-right: 10px;
+        }
+    }
+    .layout{
+        width: 1200px;
+        margin: 0 auto;
+        .s_sub{
+            float: left;
+            ul{
+                list-style: none;
+                li{
+                    &:first-child{
+                        padding-left: 0;
+                    }
+
+                    float: left;   
+                    padding: 0 8px;
+                    position: relative;
+                    a{
+                        color: #a4a4a4;
+                    }
+                    .s-dropdown{
+                        &:hover>.b{
+                            display: block;
+                        }
+                        
+                        .h{
+                            position: relative;
+                            padding: 0 10px 0 8px;
+                            height: 30px;
+                            .icon-dropdown{
+                                
+                                &:before{
+                                    content: "";
+                                    width: 0;
+                                    height: 0;
+                                    display: block;
+                                    border-left: 4px solid transparent;
+                                    border-right: 4px solid transparent;
+                                    border-top: 6px solid #999;
+                                    position: absolute;
+                                    top: 3px;
+                                    right: -5px;
+                                }
+                            }
+                        }
+                        .b{
+                            
+                            .dropdown-more{
+                                width: 144px;
+                                padding: 9px 9px 10px 9px;
+                                text-align: center;
+                                line-height: 32px;
+                                a{
+                                    color: #3a3a3a;
+                                }
+                                dl{
+                                    border-bottom: 1px solid #eaeaea;
+                                    padding-bottom: 5px;
+                                    
+                                }
+                                .code{
+                                    padding-top: 22px;
+                                    color: #717171;
+                                    img{
+                                        width: 76px;
+                                        height: 76px;
+                                        margin: 0 auto;
+                                        vertical-align: top;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+        .s-main{
+            float: right;
+            margin-right: -18px;
+
+        }
+    }
+}
+
+
+
+
+.header {
+    min-width: 1200px;
+    height: 50px;
+    padding: 10px 0;
+    background: #fff;
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.06);
+    -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.06);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.06);
+    position: relative;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    line-height: 1.5;
+}
+.left{
+    float: left;
+    .logo {
+        float: left;
+        margin-right: 40px;
+        width: 240px;
+        height: 50px;
+        a{
+            float: left;
+        }
+    }
+    .logo-area em {
+        width: 1px;
+        height: 22px;
+        background: #afafaf;
+        float: left;
+        margin: 0 16px;
+        margin-top: 15px;
+    }
+}
+.naver {
+    float: left;
+    max-width: 560px;
+    height: 40px;
+    overflow: hidden;
+    margin-top: 5px;
+    li {
+        float: left;
+        margin-right: 20px;
+    }
+    a {
+        font-size: 16px;
+        color: #3a3a3a;
+        position: relative;
+        line-height: 40px;
+        display: block;
+    }
+}
+.naver-sub {
+    z-index: 305;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    min-width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #ebebeb;
+    background: #fff;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(121,121,121,0.26);
+    -moz-box-shadow: 0 3px 3px 0 rgba(121,121,121,0.26);
+    box-shadow: 0 3px 3px 0 rgba(121,121,121,0.26);
+
+    .naver-sub-wrap {
+        width: 1200px;
+        margin: 0 auto;
+        overflow: hidden;
+        background-color: #fff;
+        .p-title {
+            width: 1176px;
+            font-size: 14px;
+            line-height: 30px;
+            padding: 5px 12px 0 0;
+            .s1 {
+                max-width: 170px;
+                margin-right: 15px;
+                a {
+                    color: #3a3a3a;
+                }
+            }
+            .s2 {
+                width: 942px;
+                max-height: 60px;
+                overflow: hidden;
+                a {
+                    padding: 0 15px;
+                    color: #717171;
+                }
+            }
+        }
+        .grid-list {
+            width: 1236px;
+            padding: 0 0 0 18px;
+        }
+        .grid-items {
+            margin: 0;
+            width: 120px;
+            height: 206px;
+            margin-right: 54px;
+            margin-bottom: 18px;
+            .grid-img {
+                width: 120px;
+                height: 120px;
+                margin: 23px auto 0;
+            }
+            .grid-title {
+                width: 120px;
+                padding: 0;
+                height: 42px;
+            }            
+        }
+    }
+
+}
+.grid-items {
+    background: #FFF;
+    float: left;
+    z-index: 1;
+    .grid-img img {
+        width: 100%;
+        height: 100%;
+    }    
+    .thumb {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+    }
+    .grid-title {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 16px 20px 2px;
+        overflow: hidden;
+        color: #3a3a3a;
+        height: 40px;
+        display: table-cell;
+        vertical-align: bottom;
+        width: 259px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 26px;
+    }
+}
+.layout {
+    width: 1200px;
+    margin: 0 auto;
+    &:before{
+        content: "";
+        display: table;
+    }
+    &:after{
+        content: "";
+        display: table;
+    }
+}
+.fr, .right, .right-area {
+    float: right;
+}
+.right{
+    float: right;    
+}
+.search-bar {
+    margin-top: 14px;
+    .search-bar-form {
+        line-height: 1;
+        border-bottom: 1px solid #ddd;
+        width: 330px;
+        height: 27px;
+        overflow: hidden;
+        .button {
+            
+            background: url(https://res.vmallres.com/20180504/images/echannel/icon-common.png);
+            background-position: 0 -25px;
+            width: 20px;
+            height: 33px;
+            cursor: pointer;
+            border: 0;
+            text-indent: -9999px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+        }
+        .text {
+            background: #fff;
+            border: 0;
+            color: #3a3a3a;
+            width: 299px;
+            padding-left: 11px;
+            height: 27px;
+            line-height: 27px;
+        }
+    }
+    .search-bar-key {
+        position: absolute;
+        max-width: 280px;
+        right: 25px;
+        bottom: 8px;
+        z-index: 2;
+        white-space: nowrap;
+        text-align: right;
+        overflow: hidden;
+        a {
+            color: #a4a4a4;
+            font-size: 12px;
+            margin-right: 10px;
+            padding: 4px 4px 1px;
+            background: #f5f5f5;
+        }
+    }
+}
+.search-bar-history {
+    background: #fff;
+    width: 328px;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 27px;
+    line-height: 26px;
+    z-index: 310;
+    ul {
+        text-indent: 10px;
+    }
+    p {
+        text-indent: 10px;
+    }
+    label {
+        color: #888;
+    }
+    .search-history-btn {
+        float: right;
+        width: 26px;
+        height: 26px;
+        margin-right: 4px;
+        text-indent: -999px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+.relative {
+    position: relative;
+}
+input{
+    font-size: 100%;
+}
+
+a:hover{
+    color:#00b5e2 !important;
+}
+
+
+

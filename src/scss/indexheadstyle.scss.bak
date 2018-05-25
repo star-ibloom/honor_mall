@@ -1,0 +1,105 @@
+
+/*  通用样式    */
+body,h1,h3,h4,h2,h5,h6,ul,ol,p,fieldset,dd,dl,input,textarea,option,hr,td{margin:0;padding:0;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:normal;}
+i,em{font-style:normal;}
+li{list-style:none;}
+img{border:0;display:block;}
+a,input{outline:none;}
+body{font:12px/1em "arial" ;color:#666;}
+.clear:after{content:".";display:block;clear:both;height:0;visibility:hidden;}
+.clear{zoom:1;}
+.border0{border:0;}
+
+/**/    
+.shortcut{ 
+    min-width: 1200px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+
+}
+.layout{
+    width: 1200px;
+    margin: 0 auto
+}
+.s_sub{
+    float: left;
+}
+.shortcut li:first-child{
+    padding-left: 0;
+}
+.shortcut li{
+    float: left;
+    padding: 0 8px;
+    position: relative
+}
+.shortcut li:before{
+    content: "";
+    width: 1px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #e4e4e4
+}
+.shortcut a{
+    color: #a4a4a4;
+}
+.shortcut a:hover{
+    color: #00b5e2;
+}
+.shortcut .s-dropdown{
+    position: relative;
+    z-index: 310;
+    margin: 0 -8px;
+    height: 30px
+}
+.shortcut .s-dropdown .h{
+    position: relative;
+    padding: 0 10px 0 8px;
+    height: 30px
+}
+.shortcut a {
+    color: #a4a4a4;
+}
+.shortcut .s-dropdown .icon-dropdown{
+    position: relative;
+    padding-right: 10px;
+}
+.h .icon-dropdown:before {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #999;
+    position: absolute;
+    top: 3px;
+    right: -5px;
+}
+
+
+.shortcut .s-dropdown .b{
+    display: none;
+    position: absolute;
+    top: 30px;  
+    right: 0;
+    background: #fff;
+    border: 1px solid #ededed;
+    .dropdown-more{
+        width: 144px;
+        padding: 9px 9px 10px 9px;
+        text-align: center;
+        line-height: 32px
+    }
+}
+.shortcut 
+.shortcut .s-main{
+    float: right;
+    margin-right: -18px;
+}

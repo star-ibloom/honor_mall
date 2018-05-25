@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表页</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/goodliststyle.css">
+
+</head>
+
+<body>
+    <div class="shortcut">
+        <div class="layout">
+            <div class="s_sub">
+                <ul>
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="">华为官网</a>
+                    </li>
+                    <li>
+                        <a href="">荣耀官网</a>
+                    </li>
+                    <li>
+                        <a href="">花粉俱乐部</a>
+                    </li>
+                    <li>
+                        <a href="">帮助中心</a>
+                    </li>
+                    <li>
+                        <a href="">V码(优购码)</a>
+                    </li>
+                    <li>
+                        <a href="">企业购</a>
+                    </li>
+                    <li class="s-hwep hide" id="li-enterprise-preferential"></li>
+                    <li>
+                        <a href="">Select Region</a>
+                    </li>
+                    <li>
+                        <div class="s-dropdown">
+                            <div class="h">
+                                <a href="" class="icon-dropdown">更多精彩</a>
+                            </div>
+                            <div class="b">
+                                <div class="dropdown-more">
+                                    <dl>
+                                        <dt>
+                                            <a href="">EMUI</a>
+                                        </dt>
+                                        <dt>
+                                            <a href="">应用市场</a>
+                                        </dt>
+                                        <dt>
+                                            <a href="">华为终端云空间</a>
+                                        </dt>
+                                        <dt>
+                                            <a href="">开发者联盟</a>
+                                        </dt>
+                                    </dl>
+                                    <div class="code">
+                                        <a href="">
+                                            <img src="https://res.vmallres.com/appdownload/home/qrcode_vmall_new_app01.png?20170221" alt="">
+                                        </a>
+                                        <p>扫一扫
+                                            <a href="">下载客户端</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="s-main">
+                <img src="https://res.vmallres.com/20180504/images/echannel/bg/bg71.png" class="hide">
+                <ul>
+                    <li id="unlogin_status">
+                        <div class="header-toolbar" id="top_unlogin">
+                            <div class="header-toolbar-item">
+                                <div class="i-login">
+                                    <div class="h">
+                                        <a href="">请登录</a>
+                                        <a href=""> 注册</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="login_status" class="hide">
+                        <div id="top_login" class="header-toolbar">
+                            <div class="s-dropdown">
+                                <div class="h-wide h" id="up_loginName-hover">
+                                    <a href="" class="icon-dropdown">
+                                        <span id="up_loginName"></span>
+                                    </a>
+                                </div>
+                                <div class="b">
+                                    <div class="dropdown-i-mail">
+                                        <div class="user-head fl"></div>
+                                        <div class="user-info fl"></div>
+                                    </div>
+                                    <div class="i-mall-uc">
+                                        <dl class="clear">
+                                            <span class="fl">我的订单</span>
+                                            <a href="">更多</a>
+                                        </dl>
+                                        <div class="imall-uc-con">
+                                            <div class="clear">
+                                                <dl>
+                                                    <dd>
+                                                        <a href="">待支付</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="">待评价</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="">退换货</a>
+                                                    </dd>
+                                                    <dd>
+                                                        <a href="">旧机回收</a>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="i-mall-huaban">
+                                        <ul class="clear">
+                                            <li>
+                                                <p class="p-img">
+                                                    <a href="" id="point"></a>
+                                                    <span class="im01"></span>
+                                                </p>
+                                                <p class="dec">积分</p>
+                                                <p class="p-price">
+                                                    <span id="userPointBalance">--</span>"分"
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p class="p-img">
+                                                    <a href=""></a>
+                                                    <span class="img02"></span>
+                                                </p>
+                                                <p class="p-dec">优惠券</p>
+                                                <p class="p-price">
+                                                    <span id="top-conponCount">--</span>"张"
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p class="p-img">
+                                                    <a href=""></a>
+                                                </p>
+                                                <p class="p-dec">代金券</p>
+                                                <p class="p-price">
+                                                    <span id="banlanceAmount">--</span>"元"
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="i-out"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">我的订单</a>
+                    </li>
+                    <li>
+                        <div class="s-dropdown">
+                            <div class="h h-wide" id="header-toolbar-minicart">
+                                <a href="/cart?t=15270370394711527037037911" class="icon-minicart" rel="nofollow" timetype="timestamp" target="blank" onclick="pushMyCartMsg()">
+                                    <span>购物车(
+                                        <span id="header-cart-total">2</span>)</span>
+                                </a>
+                            </div>
+                            <div class="b" id="header-toolbar-minicart-content">
+                                <!-- 2017-06-19-迷你购物车-start -->
+                                <div class="dropdown-minicart">
+                                    <div class="minicart-pro-empty " id="minicart-pro-empty">
+                                        <p>
+                                            <span class="icon-minicart"></span>
+                                        </p>
+                                        <p>您的购物车是空的，赶紧选购吧~</p>
+                                        <a href="https://www.vmall.com">去逛逛吧</a>
+                                    </div>
+                                    <div class="minicart-pro-list minicart-pro-list-scroll hide" id="minicart-pro-list-block">
+                                        <ul class="minicart-pro-list" id="minicart-goods-list"></ul>
+                                        <div class="minicart-pro-settleup" id="minicart-pro-settleup">
+                                            <p>
+                                                <span>总计：</span>
+                                                <span>
+                                                    <b id="micro-cart-totalPrice">¥&nbsp;0</b>
+                                                    <s id="micro-cart-totalOriginPrice">¥&nbsp;0</s>
+                                                </span>
+                                            </p>
+                                            <a class="button-minicart" id="button-minicart-go2confirm" href="javascript:;" onclick="ec.minicart.confirm()">结算</a>
+                                            <a class="button-minicart disabled" id="disbutton-minicart-go2confirm" style="display:none;">结算</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2017-06-19-迷你购物车-end -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="layout">
+            <div class="left">
+                <!-- 2017-06-19-logo-专区-start -->
+                <div class="logo logo-area">
+                    <a href="https://www.vmall.com/" title="Vmall.com - 华为商城">
+                        <img src="https://res.vmallres.com/pimages/temp/product/20170703105852645577.png" alt="Vmall.com - 华为商城">
+                    </a>
+                    <em></em>
+                    <a href="https://www.vmall.com/honor">
+                        <img src="https://res.vmallres.com/pimages//sale/2017-08/2017080111372260.png">
+                    </a>
+                </div>
+                <!-- 2017-06-19-logo-专区-end -->
+
+                <!-- 2017-06-19-导航-start -->
+                <div class="naver">
+                    <ul id="naver" class="clearfix">
+                        <li id="zxnav_0" data-id="0">
+                            <a href="" target="_blank">
+                                <span>手机</span>
+                            </a>
+                            <input id="zxnav_0_flag" type="hidden" autocomplete="off" value="no">
+                            <input id="zxnav_0_name" type="hidden" autocomplete="off" value="手机">
+                        </li>
+                        <li id="zxnav_1" data-id="1">
+                            <a href="" target="_blank">
+                                <span>笔记本 &amp; 平板</span>
+                            </a>
+                            <input id="zxnav_1_flag" type="hidden" autocomplete="off" value="no">
+                            <input id="zxnav_1_name" type="hidden" autocomplete="off" value="笔记本 &amp; 平板">
+                        </li>
+                        <li id="zxnav_2" data-id="2">
+                            <a href="" target="_blank">
+                                <span>穿戴</span>
+                            </a>
+                            <input id="zxnav_2_flag" type="hidden" autocomplete="off" value="no">
+                            <input id="zxnav_2_name" type="hidden" autocomplete="off" value="穿戴">
+                        </li>
+                        <li id="zxnav_3" data-id="3">
+                            <a href="" target="_blank">
+                                <span>智能家居</span>
+                            </a>
+                            <input id="zxnav_3_flag" type="hidden" autocomplete="off" value="yes">
+                            <input id="zxnav_3_name" type="hidden" autocomplete="off" value="智能家居">
+                        </li>
+                        <li id="zxnav_4" data-id="4">
+                            <a href="" target="_blank">
+                                <span>配件</span>
+                            </a>
+                            <input id="zxnav_4_flag" type="hidden" autocomplete="off" value="no">
+                            <input id="zxnav_4_name" type="hidden" autocomplete="off" value="配件">
+                        </li>
+                        <li>
+                            <a href="https://www.vmall.com/huawei" target="_blank">
+                                <span>华为专区</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="naver-sub">
+                    <div id="naverSub00" class="naver-sub-wrap hide">
+                        <div class="p-title clearfix">
+                            <div class="s1 fl">
+                                <a href="" target="_blank" class="">全部手机&gt;</a>
+                            </div>
+                            <div class="s2 fl clearfix">
+                                <input id="child_name" type="hidden" value="荣耀系列">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="" target="_blank" class="fl">荣耀系列</a>
+                                <input id="child_name" type="hidden" value="畅玩系列">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="" target="_blank" class="fl">畅玩系列</a>
+                            </div>
+                            <!--<div class="s3 fr"><a href="javascript:;" target="_blank"> 查看全部 ></a></div>-->
+                        </div>
+
+                        <ul id="zxnav_0_prolist" class="grid-list clearfix">
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/84570258.html" onclick="pushNaverCategoryMsg(0,'/product/84570258.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443189175/142_142_1496990939106mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀9</div>
+                                    <p class="grid-price">¥2299.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/337476941.html" onclick="pushNaverCategoryMsg(1,'/product/337476941.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443190683/142_142_1504174310613mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩6</div>
+                                    <p class="grid-price">¥599.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/478362844.html" onclick="pushNaverCategoryMsg(2,'/product/478362844.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443204793/142_142_1514860379284mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩7X</div>
+                                    <p class="grid-price">¥1299.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/570379791.html" onclick="pushNaverCategoryMsg(3,'/product/570379791.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443210244/142_142_1511747365975mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀V10</div>
+                                    <p class="grid-price">¥2999.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/501317311.html" onclick="pushNaverCategoryMsg(4,'/product/501317311.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443211937/142_142_1513560677378mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀9青春版</div>
+                                    <p class="grid-price">¥1199.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/10086883263315.html" onclick="pushNaverCategoryMsg(5,'/product/10086883263315.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443218929/142_142_1520998479950mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩7C</div>
+                                    <p class="grid-price">¥899.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/10086785341226.html" onclick="pushNaverCategoryMsg(6,'/product/10086785341226.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443232413/142_142_1523952379540mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀10</div>
+                                    <p class="grid-price">¥2599.00</p>
+                                </a>
+                            </li>
+                            <!--通过添加current 来实现 hover效果-->
+                            <input id="name_10086431508342" type="hidden" value="荣耀10">
+                            <input id="name_464599242" type="hidden" value="荣耀V10">
+                            <input id="name_165093905" type="hidden" value="荣耀9青春版">
+                            <input id="name_98670947" type="hidden" value="荣耀畅玩7X">
+                            <input id="name_899430277" type="hidden" value="荣耀9">
+                            <input id="name_10086555041694" type="hidden" value="荣耀畅玩7C">
+                            <input id="name_153092760" type="hidden" value="荣耀畅玩6">
+                        </ul>
+                        <input id="zxnav_0_skuIds" type="hidden" value="10086431508342,464599242,165093905,98670947,899430277,10086555041694,153092760,">
+                    </div>
+                    <div id="naverSub01" class="naver-sub-wrap hide">
+                        <div class="p-title clearfix">
+                            <div class="s1 fl">
+                                <a href="/list-161" target="_blank" class="">全部笔记本 &amp; 平板&gt;</a>
+                            </div>
+                            <div class="s2 fl clearfix">
+                                <input id="child_name" type="hidden" value="笔记本电脑">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-395" target="_blank" class="fl">笔记本电脑</a>
+                                <input id="child_name" type="hidden" value="平板电脑">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-177" target="_blank" class="fl">平板电脑</a>
+                                <input id="child_name" type="hidden" value="笔记本配件">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-401" target="_blank" class="fl">笔记本配件</a>
+                            </div>
+                            <!--<div class="s3 fr"><a href="javascript:;" target="_blank"> 查看全部 ></a></div>-->
+                        </div>
+                        <!--    这是地下class的东西  我全给删了 -->
+                        <ul id="zxnav_1_prolist" class="grid-list clearfix">
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/13278818.html" onclick="pushNaverCategoryMsg(0,'/product/13278818.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443146048/142_142_1476778957240mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀平板2</div>
+                                    <p class="grid-price">¥1299.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/121879018.html" onclick="pushNaverCategoryMsg(1,'/product/121879018.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443179558/142_142_1496829611135mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩平板2 8英寸</div>
+                                    <p class="grid-price">¥1299.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/405225095.html" onclick="pushNaverCategoryMsg(2,'/product/405225095.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443182770/142_142_1494904534464mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩平板2 9.6英寸</div>
+                                    <p class="grid-price">¥999.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/306161153.html" onclick="pushNaverCategoryMsg(3,'/product/306161153.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443192434/142_142_1500629825123mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩平板2 7英寸</div>
+                                    <p class="grid-price">¥599.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/516255415.html" onclick="pushNaverCategoryMsg(4,'/product/516255415.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443204526/142_142_1506671611280mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀WaterPlay</div>
+                                    <p class="grid-price">¥1899.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/10086350349834.html" onclick="pushNaverCategoryMsg(5,'/product/10086350349834.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443233182/142_142_1524125610580mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀MagicBook</div>
+                                    <p class="grid-price">¥4999.00</p>
+                                </a>
+                            </li>
+                            <!--通过添加current 来实现 hover效果-->
+                            <input id="name_10086734411761" type="hidden" value="荣耀MagicBook">
+                            <input id="name_553104015" type="hidden" value="荣耀WaterPlay">
+                            <input id="name_234223211" type="hidden" value="荣耀畅玩平板2 7英寸">
+                            <input id="name_887012722" type="hidden" value="荣耀畅玩平板2 9.6英寸">
+                            <input id="name_554205373" type="hidden" value="荣耀畅玩平板2 8英寸">
+                            <input id="name_811569431" type="hidden" value="荣耀平板2">
+                        </ul>
+                        <input id="zxnav_1_skuIds" type="hidden" value="10086734411761,553104015,234223211,887012722,554205373,811569431,">
+                    </div>
+                    <div id="naverSub02" class="naver-sub-wrap hide">
+                        <div class="p-title clearfix">
+                            <div class="s1 fl">
+                                <a href="/list-217" target="_blank" class="">全部穿戴&gt;</a>
+                            </div>
+                            <div class="s2 fl clearfix">
+                                <input id="child_name" type="hidden" value="手环/手表">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-219" target="_blank" class="fl">手环/手表</a>
+                            </div>
+                            <!--<div class="s3 fr"><a href="javascript:;" target="_blank"> 查看全部 ></a></div>-->
+                        </div>
+
+                        <ul id="zxnav_2_prolist" class="grid-list clearfix">
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/414244322.html" onclick="pushNaverCategoryMsg(0,'/product/414244322.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443114986/142_142_1467855218448mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩手环 A1</div>
+                                    <p class="grid-price">¥199.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/184868333.html" onclick="pushNaverCategoryMsg(1,'/product/184868333.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443151868/142_142_1487746881428mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀手表 S1</div>
+                                    <p class="grid-price">¥599.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/369652507.html" onclick="pushNaverCategoryMsg(2,'/product/369652507.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443193080/142_142_1504584577479mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀畅玩手环 A2</div>
+                                    <p class="grid-price">¥199.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/993405255.html" onclick="pushNaverCategoryMsg(3,'/product/993405255.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443183548/142_142_1496627716396mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀手环3</div>
+                                    <p class="grid-price">¥199.00</p>
+                                </a>
+                            </li>
+                            <!--通过添加current 来实现 hover效果-->
+                            <input id="name_636006496" type="hidden" value="荣耀手环3">
+                            <input id="name_217060648" type="hidden" value="荣耀畅玩手环 A2">
+                            <input id="name_791219487" type="hidden" value="荣耀手表 S1">
+                            <input id="name_443556516" type="hidden" value="荣耀畅玩手环 A1">
+                        </ul>
+                        <input id="zxnav_2_skuIds" type="hidden" value="636006496,217060648,791219487,443556516,">
+                    </div>
+                    <div id="naverSub03" class="naver-sub-wrap hide">
+                        <div class="p-title clearfix">
+                            <div class="s1 fl">
+                                <a href="/list-163" target="_blank" class="">全部智能家居&gt;</a>
+                            </div>
+                            <div class="s2 fl clearfix">
+                                <input id="child_name" type="hidden" value="路由器">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-183" target="_blank" class="fl">路由器</a>
+                                <input id="child_name" type="hidden" value="电力猫/wifi放大器">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-181" target="_blank" class="fl">电力猫/wifi放大器</a>
+                                <input id="child_name" type="hidden" value="电视盒子">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-185" target="_blank" class="fl">电视盒子</a>
+                                <input id="child_name" type="hidden" value="照明">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-383" target="_blank" class="fl">照明</a>
+                                <input id="child_name" type="hidden" value="清洁">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-437" class="fl">清洁</a>
+                                <input id="child_name" type="hidden" value="节能">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-439" class="fl">节能</a>
+                                <input id="child_name" type="hidden" value="环境">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-385" target="_blank" class="fl">环境</a>
+                                <input id="child_name" type="hidden" value="安防">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-391" class="fl">安防</a>
+                                <input id="child_name" type="hidden" value="健康">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-415" class="fl">健康</a>
+                                <input id="child_name" type="hidden" value="厨电">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-389" class="fl">厨电</a>
+                                <input id="child_name" type="hidden" value="影音">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-417" class="fl">影音</a>
+                                <input id="child_name" type="hidden" value="卫浴">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-387" class="fl">卫浴</a>
+                                <input id="child_name" type="hidden" value="出行">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-419" target="_blank" class="fl">出行</a>
+                                <input id="child_name" type="hidden" value="智趣">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-441" class="fl">智趣</a>
+                                <input id="child_name" type="hidden" value="其他">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-393" target="_blank" class="fl">其他</a>
+                            </div>
+                            <!--<div class="s3 fr"><a href="javascript:;" target="_blank"> 查看全部 ></a></div>-->
+                        </div>
+
+                        <ul id="zxnav_3_prolist" class="grid-list clearfix">
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/202235028.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443202386/142_142_1507802394680mp.jpg"> </p>
+                                    <div class="grid-title">荣耀分布式路由</div>
+                                    <p class="grid-price">¥899</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/611513952.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443197071/142_142_1507545954611mp.jpg"> </p>
+                                    <div class="grid-title">荣耀路由2</div>
+                                    <p class="grid-price">¥199</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/582146467.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443176465/142_142_1500025136978mp.jpg"> </p>
+                                    <div class="grid-title">荣耀路由X1</div>
+                                    <p class="grid-price">¥99</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/1822.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443140435/142_142_1472522118416mp.jpg"> </p>
+                                    <div class="grid-title">荣耀路由</div>
+                                    <p class="grid-price">¥188</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/690174055.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443135615/142_142_1469695994751mp.jpg"> </p>
+                                    <div class="grid-title">荣耀盒子Pro</div>
+                                    <p class="grid-price">¥419</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/3061.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443096572/142_142_1466759818561mp.jpg"> </p>
+                                    <div class="grid-title">荣耀WiFi穿墙宝</div>
+                                    <p class="grid-price">¥268</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/10086108103006.html">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/GB3102150001001/142_142_1503562216889mp.jpg"> </p>
+                                    <div class="grid-title">欧普智清读写台灯</div>
+                                    <p class="grid-price">¥259</p>
+                                </a>
+                            </li>
+                        </ul>
+                        <input id="zxnav_3_skuIds" type="hidden" value="964803411,480239066,198384398,329588060,361227976,7229,10086432427912,">
+                    </div>
+                    <div id="naverSub04" class="naver-sub-wrap hide">
+                        <div class="p-title clearfix">
+                            <div class="s1 fl">
+                                <a href="/list-165" target="_blank" class="">全部配件&gt;</a>
+                            </div>
+                            <div class="s2 fl clearfix">
+                                <input id="child_name" type="hidden" value="贴膜">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-191" target="_blank" class="fl">贴膜</a>
+                                <input id="child_name" type="hidden" value="保护壳">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-189" target="_blank" class="fl">保护壳</a>
+                                <input id="child_name" type="hidden" value="保护套">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-193" target="_blank" class="fl">保护套</a>
+                                <input id="child_name" type="hidden" value="盒子专属配件">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-209" target="_blank" class="fl">盒子专属配件</a>
+                                <input id="child_name" type="hidden" value="表带">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-281" target="_blank" class="fl">表带</a>
+                                <input id="child_name" type="hidden" value="耳机">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-305" target="_blank" class="fl">耳机</a>
+                                <input id="child_name" type="hidden" value="音箱">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-307" target="_blank" class="fl">音箱</a>
+                                <input id="child_name" type="hidden" value="电源/充电器/线材">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-309" target="_blank" class="fl">电源/充电器/线材</a>
+                                <input id="child_name" type="hidden" value="自拍杆/器">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-311" target="_blank" class="fl">自拍杆/器</a>
+                                <input id="child_name" type="hidden" value="智能硬件">
+                                <input id="child_status" type="hidden" value="1">
+                                <input id="child_type" type="hidden" value="1">
+                                <a href="/list-323" target="_blank" class="fl">智能硬件</a>
+                            </div>
+                            <!--<div class="s3 fr"><a href="javascript:;" target="_blank"> 查看全部 ></a></div>-->
+                        </div>
+
+                        <ul id="zxnav_4_prolist" class="grid-list clearfix">
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/927153142.html" onclick="pushNaverCategoryMsg(0,'/product/927153142.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443154715/142_142_1515376079265mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀车载充电器</div>
+                                    <p class="grid-price">¥99.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/259735704.html" onclick="pushNaverCategoryMsg(1,'/product/259735704.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443127023/142_142_1475026046650mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀 10000mAh 移动电源</div>
+                                    <p class="grid-price">¥129.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/875753311.html" onclick="pushNaverCategoryMsg(2,'/product/875753311.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443174263/142_142_1494205224585mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀xSport运动蓝牙耳机</div>
+                                    <p class="grid-price">¥299.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/430223039.html" onclick="pushNaverCategoryMsg(3,'/product/430223039.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443172221/142_142_1490238286266mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀三脚架自拍杆</div>
+                                    <p class="grid-price">¥119.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/194128141.html" onclick="pushNaverCategoryMsg(4,'/product/194128141.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/1304080001401/142_142_1526611001537mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀体脂秤</div>
+                                    <p class="grid-price">¥199.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/200162339.html" onclick="pushNaverCategoryMsg(5,'/product/200162339.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443211142/142_142_1513827604555mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀音乐小巨蛋</div>
+                                    <p class="grid-price">¥199.00</p>
+                                </a>
+                            </li>
+                            <li class="grid-items">
+                                <a class="thumb" target="_blank" href="/product/10086262026261.html" onclick="pushNaverCategoryMsg(6,'/product/10086262026261.html')">
+                                    <p class="grid-img">
+                                        <img alt="" src="https://res.vmallres.com/pimages//product/6901443218523/142_142_1523938245737mp.jpg">
+                                    </p>
+                                    <div class="grid-title">荣耀魔声耳机2</div>
+                                    <p class="grid-price">¥249.00</p>
+                                </a>
+                            </li>
+                            <!--通过添加current 来实现 hover效果-->
+                            <input id="name_666644070" type="hidden" value="荣耀音乐小巨蛋">
+                            <input id="name_699422424" type="hidden" value="荣耀xSport运动蓝牙耳机">
+                            <input id="name_553811697" type="hidden" value="荣耀体脂秤">
+                            <input id="name_964254632" type="hidden" value="荣耀车载充电器">
+                            <input id="name_484448433" type="hidden" value="荣耀三脚架自拍杆">
+                            <input id="name_52650346" type="hidden" value="荣耀 10000mAh 移动电源">
+                            <input id="name_10086002399626" type="hidden" value="荣耀魔声耳机2">
+                        </ul>
+                        <input id="zxnav_4_skuIds" type="hidden" value="666644070,699422424,553811697,964254632,484448433,52650346,10086002399626,">
+                    </div>
+                </div>
+
+                <!-- 2017-06-19-导航-end -->
+            </div>
+
+            <div class="right">
+                <!-- 2017-02-15-搜索条-焦点为search-form增加className:hover -start -->
+                <div class="search-bar relative" id="searchBar-area">
+                    <div class="search-bar-form" id="search-bar-form">
+                        <form method="get" onsubmit="return search(this)">
+                            <input type="text" class="text" maxlength="200" id="search-kw" autocomplete="off">
+                            <input type="submit" class="button" value="搜索">
+                            <input type="hidden" id="channelType" name="channelType" value="0">
+                            <input type="hidden" id="default-search" value="荣耀8">
+                        </form>
+                    </div>
+                    <div class="search-bar-key" id="search-bar-key">
+                        <div class="searchBar-key">
+                            <a href="/search?keyword=%E8%8D%A3%E8%80%8010" target="_blank" rel="nofollow">荣耀10</a>
+                            <a href="/search?keyword=%E8%8D%A3%E8%80%80V10" target="_blank" rel="nofollow">荣耀V10</a>
+                            <a href="/search?keyword=%E8%8D%A3%E8%80%80%E7%95%85%E7%8E%A97C" target="_blank" rel="nofollow">荣耀畅玩7C</a>
+                            <a href="/search?keyword=%E8%8D%A3%E8%80%80%E6%89%8B%E7%8E%AF3" target="_blank" rel="nofollow">荣耀手环3</a>
+                        </div>
+                    </div>
+                    <div id="search-history" class="search-bar-history hide">
+                        <p>
+                            <label>历史记录</label>
+                            <span id="cleanUp" class="search-history-btn">清空历史数据</span>
+                        </p>
+                        <ul id="search-history-list"></ul>
+                    </div>
+                </div>
+                <!-- 2017-02-15-搜索条-end -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 这是身体 -->
+    <div class="hr-10"></div>
+    <div class="g">
+        <!--面包屑 -->
+        <div class="breadcrumb-area fcn">
+            <a href="/honor/" title="首页">首页</a>&nbsp;&gt;&nbsp;
+
+            <span>手机</span>
+        </div>
+    </div>
+    <div class="hr-10"></div>
+    <div class="layout">
+        <!-- 20140726-商品类别-start -->
+        <div class="pro-cate-area">
+            <!-- 20140726-商品类别-属性-start -->
+            <div class="pro-cate-attr clearfix">
+                <div class="p-title">分类：</div>
+                <div class="p-default">
+                    <ul>
+                        <li id="first-category" class="selected">
+                            <a href="/list-159">全部</a>
+                        </li>
+                        <!--<li class="selected"><a href="javascript:;">全部</a></li>-->
+                    </ul>
+                </div>
+
+                <!-- 二级虚拟分类 -->
+                <div class="p-values">
+                    <div class="p-operate" style="display: none;">
+                        <!-- 追加ClassName： more-expand more-drop -->
+                        <a href="javascript:;" onclick="ec.product.more(this)" class="more more-expand">更多
+                            <s></s>
+                        </a>
+                    </div>
+                    <!-- 一行的高度为30px,显示n行，p-expand的高度为nx30 -->
+                    <div class="p-expand">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="/list-171">荣耀系列</a>
+                            </li>
+                            <li>
+                                <a href="/list-173">畅玩系列</a>
+                            </li>
+                            <li>
+                                <a href="/list-175">合约机</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 20140726-商品类别-属性-end -->
+
+            <!-- 20140726-商品类别-属性-start -->
+            <!-- 20140726-商品类别-属性-end -->
+
+            <!-- 20140726-商品类别-排序-start -->
+            <div class="pro-cate-sort clearfix">
+                <div class="p-title">排序：</div>
+                <div class="p-default">
+                    <ul>
+                        <li id="sort-0" class="selected">
+                            <a href="javascript:;" onclick="ec.product.sort('0')">默认</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-values">
+                    <div class="p-expand">
+                        <ul class="clearfix">
+                            <!-- 升序选择（从低到高）： sort-asc selected   降序选择（从高到低）： sort-desc selected -->
+                            <li id="sort-1">
+                                <a href="javascript:;" class="sort-price" onclick="ec.product.sort('1')">价格
+                                    <s></s>
+                                </a>
+                            </li>
+                            <li id="sort-2">
+                                <a href="javascript:;" class="sort-eval" onclick="ec.product.sort('2')">评价数
+                                    <s></s>
+                                </a>
+                            </li>
+                            <li id="sort-3">
+                                <a href="javascript:;" class="sort-added" onclick="ec.product.sort('3')">上架时间
+                                    <s></s>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 20140726-商品类别-排序-end -->
+
+            <form id="listForm" method="post">
+                <input type="hidden" id="sortField" name="sortField" value="">
+                <input type="hidden" id="sortType" name="sortType" value="">
+                <input type="hidden" id="prdAttrList" name="prdAttrList" value="">
+            </form>
+
+        </div>
+        <!-- 20140726-商品类别-end -->
+
+        <div class="hr-20"></div>
+    </div>
+
+
+    <!-- 列表start -->
+    <div class="layout">
+        <!-- 20140726-频道-列表-start -->
+        <div class="channel-list">
+            <!-- 20140727-商品列表-start -->
+            <div class="pro-list clearfix">
+                <ul>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/10086094364044.html" title="荣耀畅玩7 全网通版 2GB+16GB（黑色）套餐四" onclick="pushListProClickMsg('2601010040613')">
+                                    <img alt="荣耀畅玩7 全网通版 2GB+16GB（黑色）套餐四" src="https://res.vmallres.com/pimages//product/6901443229857/428_428_1526518430298mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/10086094364044.html" title="荣耀畅玩7 全网通版 2GB+16GB（黑色）套餐四" onclick="pushListProClickMsg('2601010040613')">荣耀畅玩7 全网通版 2GB+16GB（黑色）套餐四
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥699</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/10086094364044.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>0人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/10086785341226.html" title="荣耀10&nbsp;AI摄影手机&nbsp;6GB+64GB&nbsp;幻影蓝&nbsp;全网通 双卡双待 高配版"
+                                    onclick="pushListProClickMsg('2601010038102')">
+                                    <img alt="荣耀10&nbsp;AI摄影手机&nbsp;6GB+64GB&nbsp;幻影蓝&nbsp;全网通 高配版" src="https://res.vmallres.com/pimages//product/2601010038102/428_428_1526972256302mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/10086785341226.html" title="荣耀10&nbsp;AI摄影手机&nbsp;6GB+64GB&nbsp;幻影蓝&nbsp;全网通 双卡双待 高配版"
+                                    onclick="pushListProClickMsg('2601010038102')">荣耀10&nbsp;AI摄影手机&nbsp;6GB+64GB&nbsp;幻影蓝&nbsp;全网通 高配版
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥2599</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/10086785341226.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>27535人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <s class="p-tag">
+                                <img alt="荣耀10&nbsp;AI摄影手机&nbsp;6GB+64GB&nbsp;幻影蓝&nbsp;全网通 双卡双待 高配版" src="https://res.vmallres.com/pimages//tag/79/1497575938261.png">
+                            </s>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/10086070385182.html" title="荣耀畅玩7A 全网通标配版 2GB+32GB（极光蓝）" onclick="pushListProClickMsg('2601010034903')">
+                                    <img alt="荣耀畅玩7A 全网通标配版 2GB+32GB（极光蓝）" src="https://res.vmallres.com/pimages//product/6901443225637/428_428_1522135590524mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/10086070385182.html" title="荣耀畅玩7A 全网通标配版 2GB+32GB（极光蓝）" onclick="pushListProClickMsg('2601010034903')">荣耀畅玩7A 全网通标配版 2GB+32GB（极光蓝）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥799</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/10086070385182.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>2433人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <s class="p-tag">
+                                <img alt="荣耀畅玩7A 全网通标配版 2GB+32GB（极光蓝）" src="https://res.vmallres.com/pimages//tag/87/1497576023361.png">
+                            </s>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/10086883263315.html" title="荣耀畅玩7C 全网通标配版 3GB+32GB（极光蓝）" onclick="pushListProClickMsg('2601010025503')">
+                                    <img alt="荣耀畅玩7C 全网通标配版 3GB+32GB（极光蓝）" src="https://res.vmallres.com/pimages//product/6901443218929/428_428_1520998479950mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/10086883263315.html" title="荣耀畅玩7C 全网通标配版 3GB+32GB（极光蓝）" onclick="pushListProClickMsg('2601010025503')">荣耀畅玩7C 全网通标配版 3GB+32GB（极光蓝）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥899</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/10086883263315.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>16116人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/570379791.html" title="荣耀V10 全网通标配版 4GB+64GB（极光蓝）" onclick="pushListProClickMsg('2601010014002')">
+                                    <img alt="荣耀V10 全网通标配版 4GB+64GB（极光蓝）" src="https://res.vmallres.com/pimages//product/6901443210213/428_428_1513158355343mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/570379791.html" title="荣耀V10 全网通标配版 4GB+64GB（极光蓝）" onclick="pushListProClickMsg('2601010014002')">荣耀V10 全网通标配版 4GB+64GB（极光蓝）
+                                    <span class="honor-blue">人工智能芯片 全面屏旗舰</span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥2499</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/570379791.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>54642人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <s class="p-tag">
+                                <img alt="荣耀V10 全网通标配版 4GB+64GB（极光蓝）" src="https://res.vmallres.com/pimages//tag/77/1497575918300.png">
+                            </s>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/738677717.html" title="荣耀V9 全网通高配版 6GB+64GB（极光蓝）" onclick="pushListProClickMsg('1001010040206')">
+                                    <img alt="荣耀V9 全网通高配版 6GB+64GB（极光蓝）" src="https://res.vmallres.com/pimages//product/6901443169443/428_428_1506589486461mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/738677717.html" title="荣耀V9 全网通高配版 6GB+64GB（极光蓝）" onclick="pushListProClickMsg('1001010040206')">荣耀V9 全网通高配版 6GB+64GB（极光蓝）
+                                    <span class="honor-blue">双镜头/麒麟960芯片/2K屏</span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥2699</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;" onclick="ec.product.arrival(107557000)" class="p-button-an">
+                                                    <span>到货通知</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>86724人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/501317311.html" title="荣耀9青春版 全网通标配版（海鸥灰）" onclick="pushListProClickMsg('2601010016404')">
+                                    <img alt="荣耀9青春版 全网通标配版（海鸥灰）" src="https://res.vmallres.com/pimages//product/6901443211944/428_428_1513560654770mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/501317311.html" title="荣耀9青春版 全网通标配版（海鸥灰）" onclick="pushListProClickMsg('2601010016404')">荣耀9青春版 全网通标配版（海鸥灰）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥1099</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/501317311.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>27909人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/144380118.html" title="荣耀V9 play 全网通高配版（极光蓝）" onclick="pushListProClickMsg('2601010003108')">
+                                    <img alt="荣耀V9 play 全网通高配版（极光蓝）" src="https://res.vmallres.com/pimages//product/6901443196173/428_428_1505116116937mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/144380118.html" title="荣耀V9 play 全网通高配版（极光蓝）" onclick="pushListProClickMsg('2601010003108')">荣耀V9 play 全网通高配版（极光蓝）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥1199</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="javascript:;" onclick="ec.product.arrival(908898770)" class="p-button-an">
+                                                    <span>到货通知</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>36800人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/478362844.html" title="荣耀畅玩7X 全网通标配版（极光蓝）" onclick="pushListProClickMsg('2601010005802')">
+                                    <img alt="荣耀畅玩7X 全网通标配版（极光蓝）" src="https://res.vmallres.com/pimages//product/6901443204793/428_428_1514860379284mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/478362844.html" title="荣耀畅玩7X 全网通标配版（极光蓝）" onclick="pushListProClickMsg('2601010005802')">荣耀畅玩7X 全网通标配版（极光蓝）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥1199</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/478362844.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>76259人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/337476941.html" title="荣耀畅玩6 全网通标配版（金色）" onclick="pushListProClickMsg('2601010002601')">
+                                    <img alt="荣耀畅玩6 全网通标配版（金色）" src="https://res.vmallres.com/pimages//product/6901443190683/428_428_1504174310613mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/337476941.html" title="荣耀畅玩6 全网通标配版（金色）" onclick="pushListProClickMsg('2601010002601')">荣耀畅玩6 全网通标配版（金色）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥599</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/337476941.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>21493人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <s class="p-tag">
+                                <img alt="荣耀畅玩6 全网通标配版（金色）" src="https://res.vmallres.com/pimages//tag/71/1497575814983.png">
+                            </s>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/531767730.html" title="荣耀Magic 4GB+64GB 全网通版（玄金黑）" onclick="pushListProClickMsg('1001010039401')">
+                                    <img alt="荣耀Magic 4GB+64GB 全网通版（玄金黑）" src="https://res.vmallres.com/pimages//product/6901443159161/428_428_1481881191127mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/531767730.html" title="荣耀Magic 4GB+64GB 全网通版（玄金黑）" onclick="pushListProClickMsg('1001010039401')">荣耀Magic 4GB+64GB 全网通版（玄金黑）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥3699</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a href="https://sale.vmall.com/honor.html" target="_blank" class="p-button-an">
+                                                    <span>立即预约</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>4176人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/922640972.html" title="【广东电信赠费】荣耀9 全网通标配版 4GB+64GB（海鸥灰）" onclick="pushListProClickMsg('2601010002102')">
+                                    <img alt="荣耀9 全网通标配版 4GB+64GB（海鸥灰）" src="https://res.vmallres.com/pimages//product/6901443189182/428_428_1496991957745mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/922640972.html" title="【广东电信赠费】荣耀9 全网通标配版 4GB+64GB（海鸥灰）" onclick="pushListProClickMsg('2601010002102')">荣耀9 全网通标配版 4GB+64GB（海鸥灰）
+                                    <span class="honor-blue"></span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥2299</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/922640972.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>550人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pro-panels">
+                            <p class="p-img">
+                                <a target="_blank" href="/product/84570258.html" title="荣耀9 全网通标配版 4GB+64GB（魅海蓝）" onclick="pushListProClickMsg('1001010043701')">
+                                    <img alt="荣耀9 全网通标配版 4GB+64GB（魅海蓝）" src="https://res.vmallres.com/pimages//product/6901443189175/428_428_1496990939106mp.jpg">
+                                </a>
+                            </p>
+                            <p class="p-name">
+                                <a target="_blank" href="/product/84570258.html" title="荣耀9 全网通标配版 4GB+64GB（魅海蓝）" onclick="pushListProClickMsg('1001010043701')">荣耀9 全网通标配版 4GB+64GB（魅海蓝）
+                                    <span class="honor-blue">现货速发</span>
+                                </a>
+                            </p>
+                            <p class="p-price">
+                                <b>¥2299</b>
+                            </p>
+                            <div class="p-button clearfix">
+                                <table colspan="0" border="0" rowspan="0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <a target="_blank" href="/product/84570258.html" class="p-button-cart">
+                                                    <span>选购</span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <label class="p-button-score">
+                                                    <span>117989人评价</span>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 20140727-商品列表-end -->
+            <!-- 分页-start -->
+            <div id="list-pager-159" class="pager">
+            </div>
+        </div>
+        <!-- 20140726-频道-列表-end -->
+    </div>
+
+
+    <!-- foot -->
+
+    <div class="hr-40"></div>
+    <div class="slogan-container">
+        <div class="slogan">
+            <ul>
+                <li class="s1">
+                    <a target="_blank" href="https://www.vmall.com/help/faq-934.html" rel="nofollow" onclick="pushFootAdvertMsg('公司介绍','https://www.vmall.com/help/faq-934.html')">
+                        <i></i>百强企业&nbsp;品质保证</a>
+                </li>
+                <li class="s2">
+                    <a target="_blank" href="https://www.vmall.com/help/faq-834.html" rel="nofollow" onclick="pushFootAdvertMsg('退换货政策','https://www.vmall.com/help/faq-834.html')">
+                        <i></i>7天退货&nbsp;15天换货</a>
+                </li>
+                <li class="s3">
+                    <a target="_blank" href="https://www.vmall.com/help/faq-4367.html" rel="nofollow" onclick="pushFootAdvertMsg('物流帮助','https://www.vmall.com/help/faq-4367.html')">
+                        <i></i>
+                        <span>48元起免运费</span>
+                    </a>
+                </li>
+                <li class="s4">
+                    <a target="_blank" href="http://consumer.huawei.com/cn/support/service-center/index.htm" rel="nofollow" onclick="pushFootAdvertMsg('服务中心','http://consumer.huawei.com/cn/support/service-center/index.htm')">
+                        <i></i>448家维修网点&nbsp;全国联保</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="service-container">
+        <div class="service">
+            <div class="service-l fl">
+                <dl class="s1">
+                    <dt>
+                        <p class="line"></p>
+                        <p class="title">购物相关</p>
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-4355.html" rel="nofollow">购物指南</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-4367.html" rel="nofollow">配送方式</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-4357.html" rel="nofollow">支付方式</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/category-16.html" rel="nofollow">常见问题</a>
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+                <dl class="s2">
+                    <dt>
+                        <p class="line"></p>
+                        <p class="title">保修与退换货</p>
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-833.html" rel="nofollow">保修政策</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-834.html" rel="nofollow">退换货政策</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-5259.html" rel="nofollow">退换货流程</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/warranty-query/index.htm" rel="nofollow">保修状态查询</a>
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+                <dl class="s3">
+                    <dt>
+                        <p class="line"></p>
+                        <p class="title">维修与技术支持</p>
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/service-center/index.htm" rel="nofollow">售后网点</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/reservation/index.htm" rel="nofollow">预约维修</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/express-repair/index.htm" rel="nofollow">手机寄修</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/sparepart-price/index.htm" rel="nofollow">维修配件价格查询</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/door-to-door-service/" rel="nofollow">上门服务</a>
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+                <dl class="s4">
+                    <dt>
+                        <p class="line"></p>
+                        <p class="title">关于我们</p>
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-934.html" rel="nofollow">公司介绍</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/help/faq-939.html" rel="nofollow">华为商城简介</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://consumer.huawei.com/cn/support/where-to-buy/" rel="nofollow">华为线下门店</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/offshop/shoplist" rel="nofollow">荣耀线下门店</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.vmall.com/common/zhaopin" rel="nofollow">诚征英才</a>
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+                <dl class="s5">
+                    <dt>
+                        <p class="line"></p>
+                        <p class="title">关注我们</p>
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>
+                                <a class="sina" rel="nofollow" href="http://weibo.com/shophuawei" target="_blank">新浪微博</a>
+                            </li>
+                            <li>
+                                <a class="qq" rel="nofollow" href="http://t.qq.com/shophuawei" target="_blank">腾讯微博</a>
+                            </li>
+                            <li>
+                                <a class="huafen" href="http://club.huawei.com" target="_blank">花粉俱乐部</a>
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+                <dl class="s6" id="serverlink">
+                    <dt class="relative">
+                        <p class="line"></p>
+                        <p class="title">友情链接</p>
+                        <!-- <p class="button">
+                                <span class="btn btn-prev disabled"> &lt; </span>
+                                <span class="btn btn-next"> &gt; </span>
+                            </p> -->
+                        <!-- 这是按钮 banner -->
+                    </dt>
+                    <dd class="">
+                        <div class="service-list clearfix" style="width: 1431px;">
+                            <ol>
+                                <li>
+                                    <a onclick="jump_link('http://www.huawei.com/cn/')">华为官网</a>
+                                </li>
+                                <li>
+                                    <a href="https://m.vmall.com" target="_blank">华为商城手机版</a>
+                                </li>
+                                <li>
+                                    <a onclick="jump_link('http://www.honor.cn/')">荣耀官网</a>
+                                </li>
+                                <li>
+                                    <a onclick="jump_link('http://club.huawei.com/')" textvalue="花粉俱乐部">花粉俱乐部</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.vmall.com/shopdc/sitemap.html" target="_blank">网站地图</a>
+                                    <br>
+                                </li>
+                            </ol>
+                        </div>
+                        <!-- 
+                                </ol><ol><li><a onclick="jump_link('http://www.hwtrip.com/')">爱旅官网</a></li><li><a onclick="jump_link('http://app.vmall.com/')">华为应用市场</a></li><li><a onclick="jump_link('http://www.wbiao.cn/')">万表网</a></li><li><a onclick="jump_link('http://www.askci.com/')">中商情报网</a></li><li><a onclick="jump_link('http://www.shuame.com/')">刷机精灵</a></li></ol><ol><li><a onclick="jump_link('https://www.vmall.com')" textvalue="华为手机">华为手机</a></li><li><a onclick="jump_link('http://www.17ugo.com/')">优购物官网</a></li><li><a onclick="jump_link('http://www.znds.com/')">智能电视</a></li><li> <a onclick="jump_link('http://www.uc.cn/')">UC浏览器</a></li><li><a onclick="jump_link('http://www.zol.com/')">中关村商城</a></li></ol><ol><li><a onclick="jump_link('http://www.kugou.com/')">酷狗音乐</a></li><li><a onclick="jump_link('http://www.958shop.com/')">百信手机网</a></li><li><a onclick="jump_link('http://www.cardbaobao.com/')">卡宝宝网</a></li><li><a onclick="jump_link('http://www.duote.com/')" textvalue="多特软件下载">多特软件下载</a></li></ol><ol><li><a onclick="jump_link('http://www.tongbu.com/')">同步助手</a></li><li><a onclick="jump_link('http://www.fengniao.com/')">蜂鸟摄影网</a></li><li><a onclick="jump_link('http://www.7po.com/')">奇珀论坛</a></li><li><a onclick="jump_link('http://www.homekoo.com/')">家具商城</a></li><li><a onclick="jump_link('http://www.paixie.net/')">拍鞋网商城</a></li></ol><ol><li><a onclick="jump_link('http://www.obolee.com/')">欧宝丽珠宝</a></li><li><a onclick="jump_link('http://www.xungou.com/')">寻购网</a></li><li><a onclick="jump_link('http://www.yzmg.com/')">亿智蘑菇</a></li><li><a onclick="jump_link('http://www.wandoujia.com/')">安卓市场</a></li><li><a onclick="jump_link('http://baike.1688.com/')">阿里巴巴生意经</a></li></ol><ol><li><a onclick="jump_link('http://product.cnmo.com/')">手机大全</a></li><li><a onclick="jump_link('http://www.anzow.com/')">安卓软件园</a></li><li><a onclick="jump_link('http://www.dashi.com/')">卓大师刷机</a></li><li><a onclick="jump_link('http://www.wpxap.com/')">智机论坛</a></li><li><a onclick="jump_link('http://www.eepw.com.cn/')">电子产品世界</a></li></ol><ol><li><a onclick="jump_link('http://www.liqucn.com/')">历趣网</a></li><li><a onclick="jump_link('http://www.51bi.com/')">网购返利</a></li><li><a title="Apple110" onclick="jump_link('http://www.apple110.com/')">Apple110</a></li><li><a onclick="jump_link('http://www.91.com/')" textvalue="91手机门户网">91手机门户网</a></li><li><a onclick="jump_link('http://www.ydss.cn/')">移动叔叔</a></li></ol><ol><li><a onclick="jump_link('http://www.outlets365.com/')">奥特莱斯</a></li><li><a onclick="jump_link('https://www.vmall.com')">荣耀Magic</a></li><li><a onclick="jump_link('http://car.ctrip.com/')">携程租车</a></li>
+                            -->
+
+                    </dd>
+                </dl>
+            </div>
+            <div class="service-r fl">
+                <dl class="s7">
+                    <dt>
+                        <p class="line"></p>
+                        <p class="title">400-088-6888</p>
+                    </dt>
+                    <dd>
+                        <ol>
+                            <li>
+                                <a>24小时客服热线（仅收市话费）</a>
+                            </li>
+                        </ol>
+                    </dd>
+                    <dd>
+                        <a id="tools-nav-service-robotim-button" rel="nofollow" class="service-btn btn-line-primary" href="http://robotim.vmall.com/live800/chatClient/chatbox.jsp?companyID=8922&amp;configID=10&amp;location=B_002&amp;chatfrom=web&amp;channelType=Vmall%e5%95%86%e5%9f%8e%e7%94%b5%e8%84%91%e7%ab%af&amp;enterurl=https%3A%2F%2Fwww.vmall.com%2Fhonor&amp;k=1&amp;remark="
+                            target="_blank" style="display: block;">
+                            <i class=""></i> 在线客服</a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-container">
+        <div class="footer">
+            <div class="footer-warrant-area clearfix">
+                <p class="footer-warrant-logo fl">
+                    <a href="https://www.vmall.com">
+                        <img src="https://res9.vmallres.com/20170310/images/echannel/index/flogo.png">
+                    </a>
+                </p>
+                <p class="fl">
+                    <a href="https://www.vmall.com/help/faq-2635.html" target="_blank" title="隐私声明" rel="nofollow">隐私声明</a>
+                    <a href="https://www.vmall.com/help/faq-778.html" target="_blank" title="服务协议" rel="nofollow">
+                        服务协议</a> Copyright © 2012-2018 华为软件技术有限公司 版权所有 保留一切权利
+                    <br>公安备案
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011402010009" target="_blank" rel="nofollow">苏公网安备32011402010009号</a>
+                    <em> | </em>
+                    <a target="_blank" href="http://www.miitbeian.gov.cn" rel="nofollow">苏ICP备17040376号-6</a>
+                    <em> | </em> 增值电信业务经营许可证：苏B2-20130048号
+                    <em>| </em>
+                    <br>网络文化经营许可证：
+                    <a href="https://res.vmallres.com/pimages//sale/2016-10/20161009102851799.jpg" target="_blank" rel="nofollow">苏网文[2015] 1599-026号</a>
+                </p>
+                <p class="fr footer-warrant-img">
+                    <a class="fl" href="http://privacy.truste.com/privacy-seal/validation?rid=81be9ca0-c821-4e2c-ad4b-ff7cff98f75f&amp;lang=zh-cn"
+                        target="_blank" rel="nofollow">
+                        <img src="https://res.vmallres.com/pimages//sale/2018-05/20180522101715775.jpg" alt="TRUSTe隐私认证" title="TRUSTe隐私认证">
+                    </a>
+                    <a class="fl" href="http://www.jsdsgsxt.gov.cn/mbm/ent/elec/view.shtml?cred=Y&amp;siteId=052c2cbca0b64d2b88ac4b7775ff40ce"
+                        target="_blank" rel="nofollow">
+                        <img src="https://res.vmallres.com/pimages//template/content/2016/20161224180914742.jpg" alt="工商网监" title="工商网监">
+                    </a>
+                    <a class="fl" href="http://odr.jsdsgsxt.gov.cn:8081/mbm/entweb/elec/certView.shtml?siteId=052c2cbca0b64d2b88ac4b7775ff40ce"
+                        target="_blank" rel="nofollow">
+                        <img src="https://res.vmallres.com/pimages//template/content/2016/20160226162415360.png" alt="电子营业执照" title="电子营业执照">
+                    </a>
+                    <a class="fl" href="https://ss.knet.cn/verifyseal.dll?sn=e13010932010038497pwz6000000&amp;trustKey=dn&amp;trustValue=vmall.com"
+                        target="_blank" rel="nofollow">
+                        <img src="https://res.vmallres.com/pimages//template/content/2016/20160226162521265.png" title="可信网站" alt="可信网站">
+                    </a>
+                    <a class="fl" href="https://search.szfw.org/cert/l/CX20121017001773002082" target="_blank" rel="nofollow">
+                        <img src="https://res.vmallres.com/pimages//template/content/2016/20160226162531395.png" title="诚信网站" alt="诚信网站">
+                    </a>
+                    <a class="fl" id="___szfw_logo___" href="https://credit.szfw.org/CX20170724001650181088.html" target="_blank" rel="nofollow">
+                        <img src="https://res.vmallres.com/pimages//sale/2017-07/20170725194955862.jpg" border="0">
+                    </a>
+                </p>
+                <!-- <script type="text/javascript">(function () { document.getElementById('___szfw_logo___').oncontextmenu = function () { return false; } })();</script> -->
+                <p>
+                    <br>
+                </p>
+            </div>
+            <!-- <script>
+        ec.code.addAnalytics({
+            baidu : true,
+            google : false,
+            hicloud : true,
+            cnzz : true,
+            suning : false,
+            dmp:true
+        });</script> -->
+        </div>
+    </div>
+
+    <script src="libs/jquery-3.3.1.js"></script>
+    <script src="libs/indexhead.js"></script>
+</body>
+
+</html>

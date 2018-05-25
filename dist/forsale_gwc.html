@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="style/resetforcar.css"/>
+	<link rel="stylesheet" type="text/css" href="style/forsalestyle2forcar.css"/>
+	<body>
+		<div class="grid4out">
+        <div class="gridformid">
+            <ul class="gridlist clear"> 
+ 
+   
+                <!-- <li class="oneofgrid"></li>  -->
+            </ul>
+        </div>
+    </div>   
+
+
+
+
+    <div id="look" class="big_pic_1920">
+        <img src="images/forsale/a869cce2-f1c7-42d0-8055-e40189124a83.png" alt="">
+    </div>
+    <div class="car">
+		<b>购物车</b> 
+		<span></span>
+		<p>件</p> 
+	</div>
+    <div id="people" class="big_pic_1920">
+        <img src="images/forsale/81fa5473-9f03-4e91-a047-ffc29a2b13eb.png" alt="">
+    </div>
+    <div id="tect"class="big_pic_1200">
+        <img src="images/forsale/b5d28791-e41d-4d2b-8881-9837f7126cec.jpg" alt="">
+    </div>
+    <div id="weight" class="big_pic_1200">
+        <img src="images/forsale/f946c7d6-9bc4-45f6-b32f-c4cc005b3fec.jpg" alt=""> 
+    </div>
+    <div id="ai" class="big_pic_1200">
+        <img src="images/forsale/2f708301-0987-4eb1-886e-509fba25ffb8.jpg" alt="">
+    </div>
+    <div id="foot" class="big_pic_1920">
+        <img src="images/forsale/6c642cd7-db6e-4985-b02a-222ad0856ea1.png" alt="">
+    </div>
+    <div id="foot2" class="big_pic_1920">
+        <img src="images/forsale/e4106d92-8776-4c99-a53f-38952959645e.png" alt="">
+    </div>
+
+
+
+
+
+	</body>
+	<script src="libs/jquery-3.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="libs/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	
+		$(function(){
+			var shopCar= new ShopCar("http://localhost:8080/dist/data/data_honor.json",".gridlist")
+		})
+		
+		function ShopCar(url,selector){
+			this.url = url;
+			this.main = $(selector);
+			this.init();
+		}
+		ShopCar.prototype= {
+			constructor : ShopCar,
+			init(){
+				this.loading()
+				.then(function(res){
+					this.json = res.subjects;
+					this.render()
+				}.bind(this));
+				this.carNum = $(".car span");
+				this.carNum.html(this.getSum());
+				this.main.on("click.addCar","a[data-id]",$.proxy(this.addCar,this));
+				this.main.on("click.changeNum","a[data-id]",$.proxy(this.changeNum,this));
+			},
+			loading(){
+				var opt = {
+					url :this.url
+				}
+				return $.ajax(opt);
+			},
+			render(){
+				var html = "";
+				this.json.forEach(function(item){
+					html +=`
+					<li class="oneofgrid">
+                   		<strong>
+	                        <a href="">
+	                            <p class="title">${item.title}</p>
+	                            <p class="desc">${item.desc}</p>
+	                            <p class="sale">
+	                                <span>
+	                                    <em>${item.em}</em>
+	                                </span>
+	                            </p>
+	                            <img src="${item.img}" alt="" class="pic">    
+	                        </a>
+	                        <p class="operate">
+	                            <span>￥
+	                                <b>${item.b}</b>
+	                                <a data-id=${item.id}><img src="images/gouwc.png" alt=""></a>
+	                            </span>
+	                        </p>
+	                        <p class="tip">
+	                            <img src=${item.img2} alt="">
+	                        </p>
+                    	</strong>
+              		</li>`
+
+				}.bind(this));
+				this.main.html(html);
+			},
+			addCar(event){
+				var target = event.target || event.srcElement;
+				var goodsId = $(target).attr("data-id");
+				
+				if(!$.cookie("shopCar")){
+					var shopCarArray = [
+						{
+							id:goodsId,
+							num :1
+						}
+					]
+					$.cookie("shopCar",JSON.stringify(shopCarArray))
+ 					return 0;
+				}
+				
+				var shopCarString = $.cookie("shopCar");
+				var shopCarArray = JSON.parse(shopCarString);
+				
+				var hasItem = false;
+				shopCarArray.forEach(function(item){
+					if(item.id == goodsId){
+						item.num++;
+						hasItem =true;
+					}
+				})
+				
+				if(!hasItem){
+					var item = {
+						id:goodsId,
+						num :1
+					}
+					shopCarArray.push(item);
+				}
+				$.cookie("shopCar",JSON.stringify(shopCarArray));
+			},
+			changeNum(){
+				this.carNum.html(this.getSum());
+			},
+			getSum(){
+				var shopCarString = $.cookie("shopCar");
+				if(shopCarString){
+					var shopCarArray = JSON.parse(shopCarString);
+					var sum = 0;
+					shopCarArray.forEach(function(item){
+						sum+= Number(item.num);
+					})
+					return sum;
+				}
+				return 0;
+			}
+			
+		}
+
+
+		//流氓边框
+		var  ocar = document.getElementsByClassName("car");
+		var ofloatcarTimer = null;
+		onscroll =  function(){
+			var scrollTop = document.documentElement.
+			scrollTop || document.body.scrollTop;
+
+			var nTop = document.documentElement.clientHeight- ocar[0].offsetHeight;
+			move(nTop/2+scrollTop-200);
+		}
+		function move(target){
+        target = parseInt(target);
+        clearInterval(ofloatcarTimer);
+        ofloatcarTimer = setInterval(function(){
+            var speed = (target - ocar[0].offsetTop)/6;
+            speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+            if(target == ocar[0].offsetTop){
+                clearInterval(ofloatcarTimer);
+            }else{
+                ocar[0].style.top = ocar[0].offsetTop + speed + "px";
+            }
+        },30)
+    }
+		
+	</script>
+	
+	
+	
+</html>

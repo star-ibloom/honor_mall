@@ -1,0 +1,242 @@
+#topout{
+    width: 100%;
+    height: 67px;
+    background: #333;
+}
+#topout h1{
+    width: 960px;
+    /* background: #aaa; */
+    height: 67px;
+    margin: 0 auto;
+    color: white;
+}
+#topout img{
+    margin-left: 4px;
+    padding-top: 12px;
+    float: left;
+}
+#v_line{ 
+    font-size: 18px;
+    float: left;
+    line-height: 64px;
+    color: #cccccc;
+    margin-left: 13px;
+}
+#hw_name{
+    float: left;
+    margin-left: 11px;
+    font-size: 18px;
+    line-height: 65px;
+}
+
+
+#mainout{
+    width: 100%;
+    background: #f2f2f2;
+    padding-top: 30px;
+    
+}
+#main{
+    width: 960px;
+    /* height: 464px; */
+    /* background: yellow; */
+    margin: 0 auto;
+    /* margin-bottom:  */
+}
+.main_left{
+    width: 146px;
+    height: 35px;
+    float: left;
+    margin-right: 12px;
+    color:   #fff;
+    background: #cccccc;
+    font-size: 16px;
+    line-height: 35px;
+}
+.main_left img{
+    float: left;  
+    margin: 9px 16px 
+}
+#phone_ico{
+    background: #B40707;
+}
+#phone_ico img{
+    margin: 6px 22px 0 26px ;
+    
+}
+.main_left span{
+    float: left;  
+    margin-left: -3px;
+}
+.mainright{
+    float: right;
+    font-size: 14px;
+    line-height: 35px;
+    color: #333;
+}
+.mainright a{
+    color: #007dff;
+}
+
+#main_mid{
+    padding: 30px 270px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    width: 420px;
+    height: 464px
+}
+.mid_items{
+    margin-top: 10px;
+    width: 418px;
+    height: 42px;
+    background:#f7f7f7;
+    border: 1px solid #d9d9d9;
+    border-radius: 21px;
+    position: relative;
+}
+.mid_left{
+    float: left;
+    width: 90px;
+    height: 100%;
+    border-right: 1px solid #d9d9d9;
+    padding: 0 16px;
+    line-height: 42px;
+    text-align: justify;
+    font-size: 14px;
+    color: #333;
+    text-align-last: justify
+    /* background: gray */
+}
+.choose_triangle{
+    float: right;
+    margin-right: 16px;
+    margin-top:17px;
+    cursor: pointer;
+}
+#chose_country{
+    font-size: 15px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 16px;
+    color: #333;
+}
+.mid_left .choose_triangle{
+    margin:18px 0px 0 8px;
+}
+#phone span{
+    font-size: 15px;
+}
+.mid_right input{
+    float: left;
+    border: none;
+    background: transparent;
+    cursor: text;
+    margin: 2px;
+    color: #333;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 0 16px;
+    margin-top: 8px;
+}
+.error_input{
+    position: absolute;
+    margin-top: 47px;
+    padding: 0 15px;
+    font-size: 12px;
+    color: #ff3320;
+    display: none;
+}
+.error_input_pas{
+    color: #ff3320;
+    margin-top: 4px;
+    padding: 0 16px;
+    font-size: 12px;
+    display: none;
+}
+// #pasless8{
+//     display: none;
+// }
+#photo_yzm{
+    margin-top: 30px;
+}
+#photo_yzm img{
+    cursor: pointer;
+    height: 40px;
+    width: 100px;
+    float: left;
+    margin-left:-27px;
+}
+#phone_yzm a{
+    color: #007dff;
+    line-height: 44px;
+    margin-left:-3px;
+}
+#password{
+    margin-top:30px
+}
+#reg_btn{
+    margin-top: 30px;
+    text-align: center;
+}
+#sub_btn{
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #B40707;
+    border: none;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    font-size: 12px;
+    cursor: pointer;
+}
+::-webkit-input-placeholder{
+    
+    color: rgb(204, 204, 204)
+}
+
+
+#add{
+    width: 960px;
+    padding-top: 40px;
+    border-bottom: 1px solid #d7d7d7
+}
+
+
+#footout{
+    width: 100%;
+    background:#f2f2f2;
+}
+#foot{
+    margin: 0 auto;
+    width:1000px;
+    height:49px;
+    padding: 29px ;
+    color: #999;
+    text-align: center;
+}
+#foot p{
+    line-height: 24px;
+}
+#foot a{
+    padding: 6px 10px;
+    color: #999;
+}
+#foot a:hover{
+    text-decoration: underline;
+}
+.v-linedown{
+    text-align: center;
+    margin:0 -5px;
+    font-size: 12px;
+    /* margin-top:33px; */
+    color:#999;
+    font-family: "arial";
+    font-weight: normal;
+}
+
+
+

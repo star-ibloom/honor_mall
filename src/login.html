@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/loginstyle.css">
+    <title>登录</title>
+</head>
+<body> 
+    <div id="top" >
+        <h1 class="clear"><img src="https://hwid1.vmallres.com/CAS/up/rss_18/logos/huaweiLogo.png" alt="logo">
+            <span class="v-line">丨</span>
+            <span id="hw_name">华为商城</span>
+        </h1>
+    </div>
+    <div id="mainout">
+        <div id="main">
+            <div id="right_box"class="clear">
+                <span class="method clear"><a href="#">账号登录</a></span>
+                <span class="method clear"><a href="#">扫码登录</a></span>
+                <div class="clear"></div>
+                <div id="login">
+                    <input type="text" name="log_username" id="phone_number" placeholder="手机号/邮箱地址">
+                    <input type="password" name="log_pas" id="password_number"placeholder="密码">
+                    
+                    <div id="checkHwout">
+                    <label>
+                    
+                        <input type="checkbox" name="rememberHwId" id="rememberHwId">
+                        <span>记住华为账号</span>                  
+                    </label> 
+                    </div> 
+                    <button id="login_btn" class="aa">登录</button>                                      
+                </div>
+                <a href="#" class="clear">更多</a>
+                <div id="others">
+                    <a href="register.html">注册账号</a>
+                    <a href="#">忘记密码？</a>
+                </div>
+                <div id="icons" class="clear">
+                    <div id="line">
+                        <img src="https://hwid1.vmallres.com/CAS/up/rss_18/css/portal/vmall_rss/loginEMUIV6/img/thirdLine.png" alt="">
+                        <span>常见问题</span>
+                        <img src="https://hwid1.vmallres.com/CAS/up/rss_18/css/portal/vmall_rss/loginEMUIV6/img/thirdLine-reverse.png" alt="">
+                    </div>
+                    
+                </div>
+                <div id="logos">
+                    <a href="#" id="qq"></a>
+                    <a href="#" id="zhifu"></a>
+                    <a href="#" id="weixin"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footout">
+        <div id="foot">
+            <p><a href="#">华为账号用户协议</a>
+                <span class="v-linedown">丨</span>
+                <a href="#">关于华为账号与隐私的声明</a>
+                <span class="v-linedown">丨</span>
+                <a href="#">常见问题</a>
+            </p>
+            <p>
+                Copyright&nbsp;©&nbsp;2011-2018&nbsp;华为技术有限公司&nbsp;版权所有&nbsp;保留一切权利&nbsp;&nbsp;苏B2-20070200号&nbsp;|&nbsp;苏ICP备09062682号-9&nbsp;
+            </p>
+        </div>
+    </div>
+</body>  
+<script src="libs/jquery-3.3.1.js"></script>
+<script>
+     $(function(){
+        $(".aa").on("click",function(){ 
+            var phoneNum = $("#phone_number").val();   
+            var pwd = $("#password_number").val();
+            var opt = {
+                url:"http://localhost/dist/php/user.php",
+                type:"POST",
+                data:{phoneNum:phoneNum,password:pwd,type:this.id}
+            }
+            $.ajax(opt) 
+            .then(function(res){
+                alert(res);
+                // alert("登陆成功")
+            })
+        })
+     })
+</script>
+</html>
