@@ -6,30 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/goodsofallstyle.css">
     <title>【荣耀家族】荣耀V10_手机_平板_手环等 – 华为商城</title>
     <script src="libs/jquery-3.3.1.js"></script>
 
 </head>
 
-<body> 
+<body>
 
-    <div class="top-banner" id="top-banner-block">	<!-- 顶部banner -->
-        <div class="top-banner-max hide" id="top-banner-max" style="display: block; background-color: rgba(0, 0, 0, 0); overflow: hidden;">
-            <div class="top-banner-img">
-                <p style="font-size:0;"><a style="display:block;position:relative;width:1920px;text-align:center;left:50%;background-color:#d1e7fe;margin-left:-960px;" title="荣耀" target="_blank" href="forsale2.html"><img src="https://res.vmallres.com/pimages//sale/2018-05/2018052312061724.jpg" style="float:none;" title="荣耀"></a><br></p>
-                <a title="折叠" href="javascript:;" class="button-top-banner-min" id="top-banner-max-toggle">-</a>
-            </div>
-        </div>
-        <div class="top-banner-min hide" id="top-banner-min" style="background-color: rgb(245, 245, 245); overflow: hidden; display: none;">
-            <div class="top-banner-img">
-                <p style="font-size:0;"><a style="display:block;position:relative;width:1920px;text-align:center;left:50%;background-color:#f5f5f5;margin-left:-960px;" title="Head" target="_blank" href="forsale2.html"><img src="https://res.vmallres.com/pimages//sale/2018-05/20180508141019200.jpg" style="float:none;" title="荣耀"></a><br></p>
-                <a title="展开" href="javascript:;" class="button-top-banner-max hide" id="top-banner-min-toggle">+</a>
-                <a class="button-top-banner-close" href="javascript:;" title="关闭" id="top-banner-min-close">关闭</a>
-            </div>
-        </div>
-        <!-- 顶部banner end -->
-    </div>
+
 
 
 
@@ -40,7 +25,7 @@
             <div class="s_sub">
                 <ul>
                     <li>
-                        <a href="#">首页</a>
+                        <a href="index.html">首页</a>
                     </li>
                     <li>
                         <a href="">华为官网</a>
@@ -107,8 +92,8 @@
                             <div class="header-toolbar-item">
                                 <div class="i-login">
                                     <div class="h">
-                                        <a href="login.html">请登录</a>
-                                        <a href="register.html"> 注册</a>
+                                        <a href="">请登录</a>
+                                        <a href=""> 注册</a>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +239,7 @@
                 <div class="naver">
                     <ul id="naver" class="clearfix">
                         <li id="zxnav_0" data-id="0">
-                            <a href="goodslist.html" target="_blank">
+                            <a href="" target="_blank">
                                 <span>手机</span>
                             </a>
                             <input id="zxnav_0_flag" type="hidden" autocomplete="off" value="no">
@@ -827,7 +812,261 @@
         </div>
     </div>
 
+    <!-- shentistart -->
+    <div id="goodstop1out">
+        <div id="goodstop">
+            <img src="images/goodsof1.png" alt="">
+        </div>
+    </div>
+    <div id="magnifierout">
+        <div id="magnifier" class="clear">
+            <div id="magnifierleft" class="clear">
+                <div id="wrap"></div>
+                <img src="images/timg.jpg" class="opacity-img" alt="">
+                <span class="grayBox"></span>
+            </div>
+            <div id="magtobig">
+                <img src="images/timg.jpg" alt="">
+            </div>
 
+            <script>
+                function Magnifier(options) {
+                    this.small_ele = $(options.small_ele);
+                    this.focus_ele = $(options.focus_ele);
+                    this.big_ele = $(options.big_ele);
+                    if (this.small_ele.length == 0 || this.focus_ele.length == 0 || this.big_ele.length == 0) return 0;
+                    this.init();
+                }
+                Magnifier.prototype = {
+                    constructor: Magnifier,
+                    init() {
+                        this.scale = this.big_ele.width() / this.focus_ele.width();
+                        this.small_ele.on("mouseenter", { hidden: false }, $.proxy(this.toggleFocus,this));
+                        this.small_ele.on("mouseleave", { hidden: true }, $.proxy(this.toggleFocus,this));
+                        this.small_ele.on("mousemove.smallMove", $.proxy(this.smallMove,this));
+                        this.small_ele.on("mousemove.bigMove", $.proxy(this.bigMove,this));
+                    },
+                    toggleFocus(event) {
+                        var opacity_img = this.small_ele.find(".opacity-img");
+                        if (event.data.hidden) {
+                            this.focus_ele.stop().fadeOut(200);
+                            this.big_ele.stop().fadeOut(200);
+                            opacity_img.stop().fadeTo("fast", 1)
+                        } else {
+                            this.focus_ele.stop().fadeIn(200);
+                            this.big_ele.stop().fadeIn(200);
+                            opacity_img.stop().fadeTo("fast", 0.3);
+                        }
+                    },
+                    smallMove(event) {
+                        var eleX = event.offsetX - this.focus_ele.width() / 2;
+                        var eleY = event.offsetY - this.focus_ele.height() / 2;
+
+                        var maxWidth = this.small_ele.width() - this.focus_ele.width();
+                        var maxHeight = this.small_ele.height() - this.focus_ele.height();
+
+                        eleX = eleX <= 0 ? 0 : eleX;
+                        eleX = eleX >= maxWidth ? maxWidth : eleX;
+
+                        eleY = eleY <= 0 ? 0 : eleY;
+                        eleY = eleY >= maxHeight ? maxHeight : eleY;
+
+                        this.focus_ele.css({
+                            left: eleX,
+                            top: eleY,
+                            backgroundPosition: `${-eleX}px ${-eleY}px`
+                        })
+                        var fullLongX = this.small_ele.width() - this.focus_ele.width();
+                        var fullLongY = this.small_ele.height() - this.focus_ele.height();
+                        this.propX = Math.round(eleX / fullLongX * 100);
+                        this.propY = Math.round(eleY / fullLongY * 100);
+
+                    },
+                    bigMove() {
+                        var bigImg = this.big_ele.find("img");
+                        var fullLongX = bigImg.width() - this.big_ele.width();
+                        var fullLongY = bigImg.height() - this.big_ele.height();
+
+                        var eleX = -Math.round(fullLongX * this.propX / 100);
+                        var eleY = -Math.round(fullLongY * this.propY / 100);
+
+                        bigImg.css({
+                            left: eleX,
+                            top: eleY
+                        })
+                    }
+                }
+                new Magnifier({
+                    small_ele: "#magnifierleft",
+                    focus_ele: ".grayBox",
+                    big_ele: "#magtobig"
+                })
+            </script>
+
+
+
+            <div id="magnifierright">
+                <img src="images/goodsof2.png" alt="">
+                <div id="product-operation" class="product-operation relative" style="display: block;">
+                    <div class="clearfix">
+                        <!-- 20170518-商品简介-购买数量-start -->
+                        <div class="product-stock" id="pro-quantity-area">
+                            <input id="pro-quantity" type="text" class="product-stock-text" placeholder="1" value="1">
+                            <p class="product-stock-btn">
+                                <a id="pro-quantity-plus" href="javascript:;">+</a>
+                                <a id="pro-quantity-minus" href="javascript:;" class="disabled">−</a>
+                            </p>
+                        </div>
+                        <!-- <div class="product-stock hide" id="pro-quantity-area-nochange" style="display: none;">
+                            <input type="text" class="product-stock-text" placeholder="1" value="1" disabled="disabled">
+                            <p class="product-stock-btn">
+                                <a href="javascript:;" class="disabled">+</a>
+                                <a href="javascript:;" class="disabled">−</a>
+                            </p>
+                        </div> -->
+                        <script>
+
+                            var inputnumber;
+                            $("#pro-quantity-plus").on("click", function () {
+                                var inputnumber = parseInt($("#pro-quantity").val()) + 1;
+                                $("#pro-quantity").val(inputnumber)
+                                $("#pro-quantity-minus").removeClass("disabled");
+                            })
+
+                            $("#pro-quantity-minus").on("click", function () {
+                                if (parseInt($("#pro-quantity").val()) < 2) {
+                                    $("#pro-quantity-minus").addClass("disabled");
+                                    return
+                                } else if (parseInt($("#pro-quantity").val()) >= 2) {
+                                    var inputnumber = parseInt($("#pro-quantity").val()) - 1;
+                                    $("#pro-quantity").val(inputnumber)
+                                }
+                            })
+
+
+                        </script>
+
+
+                        <!-- 20170518-商品简介-购买数量-end -->
+
+
+                        <div class="product-buttonmain">
+                            <!-- 20170518-商品简介-按钮-start -->
+                            <div id="pro-operation" class="product-button clearfix" style="visibility: visible;">
+                                <a href="javascript:;" onclick="ec.product.addCart()" class="product-button01">
+                                    <span>加入购物车</span>
+                                </a>
+                                <a href="javascript:;" onclick="ec.product.orderNow()" class="product-button02">
+                                    <span>立即下单</span>
+                                </a>
+                            </div>
+                            <!-- 20170518-商品简介-按钮-end -->
+                            <!-- 20170518-商品简介-协议-start -->
+                            <div class="product-agreement hide" id="product-deposit-agreement-area">
+                                <input type="checkbox" id="pro-agreement-area-check" checked="">
+                                <span>同意
+                                    <a href="javascript:;" onclick="ec.product.showDepositAgreement()">订金支付协议</a>
+                                </span>
+                            </div>
+                            <!-- 20170518-商品简介-协议-end -->
+                            <!-- 20180212-商品简介-游客购买-start -->
+
+                            <!-- 20180212-商品简介-游客购买-end -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="ithinkxiaotuout">
+        <div id="ithinkxiaotu">
+            <img src="images/googsof3.png" alt="">
+        </div>
+    </div>
+    <div id="ithinkhengzhedeout">
+        <div id="ithinkhengzhede">
+            <img src="images/goodsof4.png" alt="">
+        </div>
+    </div>
+    <div id="ithinkdaohangout">
+        <ul id="ithinkdaohang" class="clear">
+            <li class="ithink1">
+                <a>商品详情</a>
+            </li>
+            <li class="ithink2">
+                <a>规格参数</a>
+            </li>
+            <li class="ithink3">
+                <a>包装与售后</a>
+            </li>
+            <li class="ithink4">
+                <a>用户评价</a>
+            </li>
+            <div id="ithinkdaojishi">
+                <span id="thisisdaojishi">这是一个倒计时：</span>
+                <span id="ithinkfen"></span>分
+                <span id="thinkmiao"></span>秒
+            </div>
+        </ul>
+
+    </div>
+    <div id="ithinkxiangqing"></div>
+    <div id="ithinkcanshu"></div>
+    <div id="ithinkbaozhuang"></div>
+    <div id="ithinkpingjia">
+        <ul id="ithinkbiaoqian">
+            <li>标签一</li>
+            <li>标签二</li>
+            <li>标签三</li>
+        </ul>
+        <ul id="ithinklanmu">
+            <li>栏目一</li>
+            <li>栏目二</li>
+            <li>栏目三</li>
+        </ul>
+    </div>
+
+    <script>
+        var obiaoqian = document.getElementById("ithinkbiaoqian").children;
+        obiaoqian = [].slice.call(obiaoqian);
+        olanmu = document.getElementById("ithinklanmu").children;
+        olanmu = [].slice.call(olanmu);
+        obiaoqian.forEach(function (ele, index) {
+            ele.onclick = function () {
+                for (var i = 0; i < olanmu.length; i++) {
+                    olanmu[i].style.zIndex = 1;
+                }
+                olanmu[index].style.zIndex = 2;
+            }
+        })
+    </script>
+
+
+
+    <script>
+        var daojishitimer;
+        // var timenow = new Date().getTime();
+        var timeoutfordaojishi = 121000;
+        daojishitimer = setInterval(function () {
+            timeoutfordaojishi -= 1000;
+            var fen = parseInt(timeoutfordaojishi / 1000 / 60);
+            var miao = parseInt((timeoutfordaojishi - fen * 60000) / 1000);
+            $("#ithinkfen").html(fen);
+            $("#thinkmiao").html(miao);
+            // console.log(typeof ($("#thinkmiao").html()),$("#ithinkfen").html())
+            // if($("#ithinkfen").html()=="0" && $("#ithinkmiao").html()=="0"){
+            //     clearInterval(daojishitimer);
+            //     console.log(1)
+            // }
+            if (timeoutfordaojishi < 1000) {
+                clearInterval(daojishitimer)
+            }
+        }, 1000)
+
+
+    </script>
 
     <!-- 身体 -->
     <!-- 悬浮 -->
@@ -861,420 +1100,6 @@
             </ul>
         </div>
     </div> -->
-    <div class="hot-board">
-        <!--ads start-->
-        <div class="ec-slider" id="index_slider" style="width: 1347px; height: 450px;">
-            <ul class="ec-slider-list" style="width: 1347px; height: 450px;">
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180523232348808.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href=" https://sale.vmall.com/honor.html" target="_blank" onclick="_paq.push(['trackLink','荣耀频道PC首焦第1帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180523235956797.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/10086785341226.html" target="_blank"
-                            onclick="_paq.push(['trackLink','荣耀频道PC首焦第2帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180523120204423.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/10086883263315.html" target="_blank"
-                            onclick="_paq.push(['trackLink','荣耀频道PC首焦第3帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180523232509218.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/10086350349834.html" target="_blank"
-                            onclick="_paq.push(['trackLink','荣耀频道PC首焦第4帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180524000011450.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/570379791.html" target="_blank" onclick="_paq.push(['trackLink','荣耀频道PC首焦第5帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180521115717488.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/501317311.html" target="_blank" onclick="_paq.push(['trackLink','荣耀频道PC首焦第6帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180522232621548.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/478362844.html" target="_blank" onclick="_paq.push(['trackLink','荣耀频道PC首焦第7帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180522202542995.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display:list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://www.vmall.com/product/10086094364044.html" target="_blank"
-                            onclick="_paq.push(['trackLink','荣耀频道PC首焦第8帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-                <li class="ec-slider-item" style="background: url(&quot;https://res.vmallres.com/pimages//sale/2018-05/20180503141353391.jpg&quot;) 50% 0px no-repeat; width: 1347px; height: 450px; position: absolute; display: list-item;">
-                    <div style="width:100%;" class="ec-slider-item-img">
-                        <a style="width:100%;height:448px;display:block;" href="https://sale.vmall.com/smartlife.html" target="_blank" onclick="_paq.push(['trackLink','荣耀频道PC首焦第9帧', 'link', ' ']);ec.code.addAnalytics({hicloud:true});"></a>
-                    </div>
-                </li>
-            </ul>
-            <div class="ec-slider-nav-1">
-                <span class="current"></span>
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-                <span class=""></span>
-            </div>
-            <a class="button-slider-prev" href="javascript:;" style="display: block;"></a>
-            <a class="button-slider-next" href="javascript:;" style="display: block;"></a>
-        </div>
-
-
-
-
-    </div>
-
-
-    <div class="channel-floor channel-floor-honor relative">
-        <div class="hr-40"></div>
-        <div class="layout channel-floor-honor-shadow">
-            <div class="home-channel-floor honor-channel-floor">
-                <div class="h">
-                    <h2 class="channel-title fl">荣耀精品</h2>
-                </div>
-                <div class="b">
-                    <div class="goods-list">
-                        <ul class="grid-list clearfix">
-                            <li class="grid-items">
-                                <a class="thumb" href="/product/10086785341226.html" target="_blank">
-                                    <p class="grid-img">
-                                        <img alt="荣耀10" src="https://res0.vmallres.com/pimages//frontLocation/content/1916571/1524129121781.png">
-                                    </p>
-                                    <div class="grid-title">荣耀10</div>
-                                    <div class="grid-desc">购机评价赠好礼&nbsp; </div>
-                                    <div class="grid-price">¥2599</div>
-                                    <p class="grid-tips">
-                                        <img alt="荣耀10&nbsp;AI摄影手机&nbsp;6GB+64GB&nbsp;幻影紫&nbsp;全网通 双卡双待 高配版" src="https://res7.vmallres.com/pimages//tag/79/1497575938261.png">
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="grid-items">
-                                <a class="thumb" href="/product/501317311.html" target="_blank">
-                                    <p class="grid-img">
-                                        <img alt="荣耀9青春版" src="https://res0.vmallres.com/pimages//frontLocation/content/1916577/1526350281689.png">
-                                    </p>
-                                    <div class="grid-title">荣耀9青春版</div>
-                                    <div class="grid-desc">最高降200+送耳机&nbsp; </div>
-                                    <div class="grid-price">¥1099</div>
-                                </a>
-                            </li>
-                            <li class="grid-items current">
-                                <a class="thumb" href="/product/570379791.html" target="_blank">
-                                    <p class="grid-img">
-                                        <img alt="荣耀V10" src="https://res0.vmallres.com/pimages//frontLocation/content/1916575/1526308811602.png">
-                                    </p>
-                                    <div class="grid-title">荣耀V10</div>
-                                    <div class="grid-desc">限时直降200元&nbsp; </div>
-                                    <div class="grid-price">¥2499</div>
-                                    <p class="grid-tips">
-                                        <img alt="荣耀V10 全网通标配版 4GB+64GB（极光蓝）" src="https://res7.vmallres.com/pimages//tag/77/1497575918300.png">
-                                    </p>
-                                </a>
-                            </li>
-                            <li class="grid-items">
-                                <a class="thumb" href="/product/10086883263315.html" target="_blank">
-                                    <p class="grid-img">
-                                        <img alt="荣耀畅玩7C" src="https://res0.vmallres.com/pimages//frontLocation/content/1916573/1526350469172.png">
-                                    </p>
-                                    <div class="grid-title">荣耀畅玩7C</div>
-                                    <div class="grid-desc">送百元读书券&nbsp; </div>
-                                    <div class="grid-price">¥899</div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="hr-20"></div>
-                <div class="b">
-                    <div class="goods-list">
-                        <ul class="grid-list clearfix">
-                            <li class="grid-items grid-items-honor-ad">
-                                <a class="thumb" href="https://www.vmall.com/product/10086350349834.html" target="_blank">
-                                    <img alt="" src="https://res0.vmallres.com/pimages//frontLocation/content/1916583/1526784213921.jpg" style="">
-                                </a>
-
-                            </li>
-                            <li class="grid-items grid-items-honor-ad">
-                                <a class="thumb" href="https://www.vmall.com/product/194128141.html#553811697" target="_blank">
-                                    <img alt="" src="https://res0.vmallres.com/pimages//frontLocation/content/1916581/1527004366370.jpg" style="">
-                                </a>
-
-                            </li>
-                            <li class="grid-items grid-items-honor-ad">
-                                <a class="thumb" href="https://www.vmall.com/product/993405255.html" target="_blank">
-                                    <img alt="" src="https://res0.vmallres.com/pimages//frontLocation/content/1916579/1526344781267.png" style="">
-                                </a>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="hr-18"></div>
-        <!-- <div class="honor-triangle-blue-01"></div> -->
-    </div>
-
-    <div class="event-float-layout" style="height: 235px; top: 37px; display: none;">
-        <!--添加 fixed  position: fixed !important;top: 20px;z-index: 500;-->
-        <div class="event-float">
-            <div>
-                <ul class="hover-list">
-                    <li>
-                        <a data-id="0" href="javascript:;" onclick="pushMsg('手机');">手机</a>
-                    </li>
-                    <li>
-                        <a data-id="1" href="javascript:;" onclick="pushMsg('笔记本 &amp; 平板');">笔记本 &amp; 平板</a>
-                    </li>
-                    <li>
-                        <a data-id="2" href="javascript:;" onclick="pushMsg('智能穿戴');">智能穿戴</a>
-                    </li>
-                    <li>
-                        <a data-id="3" href="javascript:;" onclick="pushMsg('智能家居');">智能家居</a>
-                    </li>
-                    <li>
-                        <a data-id="4" href="javascript:;" onclick="pushMsg('热销配件');">热销配件</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="home-channel-container honor-channel-container relative">
-        <div class="hr-20"></div>
-        <!-- 初始值 -->
-        <!-- 全场景式   计算显示商品数量-->
-        <!-- 左右组合式 -->
-
-        <!-- 三套件组合式 -->
-        <div class="layout channel-floor-honor-shadow" id="flow_" +="" 0="">
-            <div class="home-channel-floor honor-channel-floor honor-storey-channel-floor">
-                <div class="h">
-                    <h2 class="channel-title fl">
-                        <a href="/list-159" target="_blank">手机</a>
-                    </h2>
-                    <ul class="channel-nav fl">
-                        <li>
-                            <a href="/list-171" target="_blank">荣耀系列</a>
-                        </li>
-                        <li>
-                            <a href="/list-173" target="_blank">畅玩系列</a>
-                        </li>
-                        <li>
-                            <a href="/list-175" target="_blank">合约机</a>
-                        </li>
-                    </ul>
-                    <div class="channel-more fr">
-                        <a href="/list-159" target="_blank">更多</a>
-                    </div>
-                </div>
-                <div class="b clearfix">
-                    <div class="span-370 fl">
-                        <div class="goods-list">
-                            <ul class="grid-promo-list clearfix">
-                                <li class="grid-items grid-items-honor-sm">
-                                    <a class="thumb" href="https://www.vmall.com/product/337476941.html" target="_blank">
-                                        <img alt="" src="https://res0.vmallres.com/pimages//frontLocation/content/1916585/1525702896095.jpg">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span-790 fl">
-                        <div class="goods-list">
-                            <ul class="grid-list clearfix">
-                                <!--通过添加current 来实现 hover效果-->
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-375 grid-items-honor-02">
-                                    <a class="thumb" href="/product/10086094364044.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀畅玩7" src="https://res0.vmallres.com/pimages//frontLocation/content/1916591/1526625723552.png">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀畅玩7</div>
-                                            <p class="grid-desc">小巧全面屏 通话大音量&nbsp; </p>
-                                            <p class="grid-price">¥599</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-375 grid-items-honor-02">
-                                    <a class="thumb" href="/product/478362844.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀畅玩7X" src="https://res0.vmallres.com/pimages//frontLocation/content/1916587/1520222607303.png">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀畅玩7X</div>
-                                            <p class="grid-desc">最高优惠200&nbsp; </p>
-                                            <p class="grid-price">¥1199</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-375 grid-items-honor-02">
-                                    <a class="thumb" href="/product/84570258.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀9" src="https://res0.vmallres.com/pimages//frontLocation/content/1916593/1513516650001.png">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀9</div>
-                                            <p class="grid-desc">最高省500元&nbsp; </p>
-                                            <p class="grid-price">¥1899</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-375 grid-items-honor-02">
-                                    <a class="thumb" href="/product/10086070385182.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀畅玩7A" src="https://res0.vmallres.com/pimages//frontLocation/content/2353841/1526350565029.png">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀畅玩7A</div>
-                                            <p class="grid-desc">标配版送半入耳式耳机&nbsp; </p>
-                                            <p class="grid-price">¥799</p>
-                                        </div>
-                                        <p class="grid-tips">
-                                            <img alt="荣耀畅玩7A 全网通标配版 2GB+32GB（极光蓝）" src="https://res0.vmallres.com/pimages//tag/87/1497576023361.png">
-                                        </p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="hr-38"></div>
-        <!-- 初始值 -->
-        <!-- 全场景式   计算显示商品数量-->
-        <!-- 左右组合式 -->
-
-        <!-- 三套件组合式 -->
-
-        <div class="layout channel-floor-honor-shadow" id="flow_" +="" 1="">
-            <div class="home-channel-floor honor-channel-floor honor-storey-channel-floor">
-                <div class="h">
-                    <h2 class="channel-title fl">
-                        <a href="/list-161" target="_blank">笔记本 &amp; 平板</a>
-                    </h2>
-                    <ul class="channel-nav fl">
-                        <li>
-                            <a href="/list-395" target="_blank">笔记本电脑</a>
-                        </li>
-                        <li>
-                            <a href="/list-177" target="_blank">平板电脑</a>
-                        </li>
-                        <li>
-                            <a href="/list-401" target="_blank">笔记本配件</a>
-                        </li>
-                    </ul>
-                    <div class="channel-more fr">
-                        <a href="/list-161" target="_blank">更多</a>
-                    </div>
-                </div>
-                <div class="b clearfix">
-                    <div class="span-370 fl">
-                        <div class="goods-list">
-                            <ul class="grid-promo-list clearfix">
-                                <li class="grid-items grid-items-honor-md">
-                                    <a class="thumb" href="https://www.vmall.com/product/10086350349834.html" target="_blank">
-                                        <img alt="" src="https://res0.vmallres.com/pimages//frontLocation/content/1916595/1526784252133.jpg">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="span-790 fl">
-                        <div class="goods-list">
-                            <ul class="grid-list clearfix">
-                                <!--通过添加current 来实现 hover效果-->
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-375 grid-items-honor-01">
-                                    <a class="thumb" href="/product/516255415.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀Waterplay" src="https://res1.vmallres.com/pimages//frontLocation/content/1916597/1524128322210.jpg">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀Waterplay</div>
-                                            <p class="grid-desc">防水影音平板 四喇叭扬声器&nbsp; </p>
-                                            <p class="grid-price">¥1899</p>
-                                        </div>
-                                        <p class="grid-tips">
-                                            <img alt="荣耀Waterplay 防水影音平板 3GB+32GB WiFi版（皓月银）" src="https://res1.vmallres.com/pimages//tag/77/1497575918300.png">
-                                        </p>
-                                    </a>
-                                </li>
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-375 grid-items-honor-01">
-                                    <a class="thumb" href="/product/405225095.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀畅玩平板2 9.6英寸" src="https://res1.vmallres.com/pimages//frontLocation/content/1916599/1507789596990.jpg">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀畅玩平板2 9.6英寸</div>
-                                            <p class="grid-desc">护眼滤蓝光高清屏&nbsp; </p>
-                                            <p class="grid-price">¥999</p>
-                                        </div>
-                                        <p class="grid-tips">
-                                            <img alt="荣耀畅玩平板2 9.6英寸 WiFi版（苍穹灰）" src="https://res1.vmallres.com/pimages//tag/77/1497575918300.png">
-                                        </p>
-                                    </a>
-                                </li>
-                                <!--区分前两个与后面的商品样式-->
-                                <li class="grid-items span-770 grid-items-honor-01">
-                                    <a class="thumb" href="/product/121879018.html" target="_blank">
-                                        <p class="grid-img">
-                                            <img alt="荣耀畅玩平板2 8英寸" src="https://res1.vmallres.com/pimages//frontLocation/content/1916601/1502872154294.jpg">
-                                        </p>
-                                        <div class="grid-info">
-                                            <div class="grid-title">荣耀畅玩平板2 8英寸</div>
-                                            <p class="grid-desc">系统持久流畅&nbsp; </p>
-                                            <p class="grid-price">¥799</p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hr-38"></div>
-        <!-- 初始值 -->
-        <!-- 全场景式   计算显示商品数量-->
-        <!-- 左右组合式 -->
-
-        <!-- 三套件组合式 -->
-
-        <div class="hr-22"></div>
-        <div class="honor-triangle-blue-02"></div>
-        <div class="honor-triangle-blue-03"></div>
-        <div class="honor-triangle-blue-04"></div>
-        <div class="honor-triangle-blue-05"></div>
-        <div class="honor-triangle-blue-06"></div>
-        <div class="honor-triangle-blue-07"></div>
-    </div>
-
 
 
 
@@ -1540,5 +1365,103 @@
 
 </body>
 <script src="libs/indexhead.js"></script>
-<script src="libs/index.js"></script>
+<!-- <script src="libs/index.js"></script>  -->
+<script>
+    $("#hungBar-top").css("display", "none");
+    var ithinknaitop = $("#ithinkdaohangout").offset().top;
+
+
+    var ithinkxiangqing = $("#ithinkxiangqing").offset().top;
+    var ithinkcanshu = $("#ithinkcanshu").offset().top;
+    var ithinkbaozhuang = $("#ithinkbaozhuang").offset().top;
+    var ithinkpingjia = $("#ithinkpingjia").offset().top;
+    var othink1234 = document.getElementById("ithinkdaohang").children;
+    othink1234 = [].slice.call(othink1234);
+    window.onscroll = function () {
+        var scrollTop = document.documentElement.
+            scrollTop || document.body.scrollTop;
+        if (scrollTop > 1500) {
+            $("#hungBar-top").css("display", "block");
+        } else {
+            $("#hungBar-top").css("display", "none");
+        }
+
+
+        if (scrollTop >= ithinknaitop) {
+            if (!$("#ithinkdaohangout").hasClass("navifloat")) {
+                $("#ithinkdaohangout").addClass("navifloat");
+            }
+        } else {
+            // console.log(1)
+            if ($("#ithinkdaohangout").hasClass("navifloat")) {
+                $("#ithinkdaohangout").removeClass("navifloat");
+            }
+        }
+
+
+        // console.log(othink1234+ithinknaitop)
+        if (scrollTop >= ithinkxiangqing) {
+            for (var i = 0; i < othink1234.length; i++) {
+                othink1234[i].style.background = "none"
+            }
+            $(".ithink1").css("background", "yellow");
+        }
+        if (scrollTop >= ithinkcanshu) {
+            for (var i = 0; i < othink1234.length; i++) {
+                othink1234[i].style.background = "none"
+            }
+            $(".ithink2").css("background", "yellow");
+        }
+        if (scrollTop >= ithinkbaozhuang) {
+            for (var i = 0; i < othink1234.length; i++) {
+                othink1234[i].style.background = "none"
+            }
+            $(".ithink3").css("background", "yellow");
+        }
+
+        if (scrollTop >= ithinkpingjia) {
+            for (var i = 0; i < othink1234.length; i++) {
+                othink1234[i].style.background = "none"
+
+            }
+            $(".ithink4").css("background", "yellow");
+        }
+    }
+    $(".ithink1").on("click", function () {
+        document.documentElement.scrollTop = $("#ithinkxiangqing").offset().top + ithinknaitop;
+        for (var i = 0; i < othink1234.length; i++) {
+            othink1234[i].style.background = "none"
+        }
+        $(".ithink1").css("background", "yellow");
+    })
+    $(".ithink2").on("click", function () {
+        document.documentElement.scrollTop = $("#ithinkcanshu").offset().top + ithinknaitop;
+        for (var i = 0; i < othink1234.length; i++) {
+            othink1234[i].style.background = "none"
+        }
+        $(".ithink2").css("background", "yellow");
+    })
+    $(".ithink3").on("click", function () {
+        document.documentElement.scrollTop = $("#ithinkbaozhuang").offset().top + ithinknaitop;
+        for (var i = 0; i < othink1234.length; i++) {
+            othink1234[i].style.background = "none"
+        }
+        $(".ithink3").css("background", "yellow");
+    })
+    $(".ithink4").on("click", function () {
+        document.documentElement.scrollTop = $("#ithinkbiaoqian").offset().top + ithinknaitop;
+        for (var i = 0; i < othink1234.length; i++) {
+            othink1234[i].style.background = "none"
+        }
+        $(".ithink4").css("background", "yellow");
+    })
+
+
+    $("#search-kw").on("click", function () {
+        $("#search-bar-key").css("display", "none");
+    })
+
+
+</script>
+
 </html>

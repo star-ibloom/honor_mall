@@ -52,7 +52,10 @@ $(function(){
         $("#naverSub01").css("display","none")
     })
 
-
+    $("#search-kw").on("click", function () {
+        $("#search-bar-key").css("display", "none");
+    })
+    
     //  $("#zxnav_2").mouseenter(function(){
     //     setTimeout(function(){
     //         $("#naverSub02")
