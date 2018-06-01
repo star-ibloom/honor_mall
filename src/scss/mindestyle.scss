@@ -1,0 +1,565 @@
+@media screen and (min-width:721px) {
+	html {
+		font-size: 250%
+	}
+}
+
+@media screen and (max-width:720px) {
+	html {
+		font-size: 250%
+	}
+}
+
+@media screen and (max-width:640px) {
+	html {
+		font-size: 222.222%
+	}
+}
+
+@media screen and (max-width:540px) {
+	html {
+		font-size: 187.5%
+	}
+}
+
+@media screen and (max-width:480px) {
+	html {
+		font-size: 166.668%
+	}
+}
+
+@media screen and (max-width:432px) {
+	html {
+		font-size: 150%
+	}
+}
+
+@media screen and (max-width:414px) {
+	html {
+		font-size: 143.75%
+	}
+}
+
+@media screen and (max-width:400px) {
+	html {
+		font-size: 138.888%
+	}
+}
+
+@media screen and (max-width:393px) {
+	html {
+		font-size: 130.204%
+	}
+}
+
+@media screen and (max-width:375px) {
+	html {
+		font-size: 130.204%
+	}
+}
+
+@media screen and (max-width:360px) {
+	html {
+		font-size: 125%
+	}   
+}
+
+@media screen and (max-width:340px) {
+	html {
+		font-size: 118.056%
+	}
+}
+
+@media screen and (max-width:320px) {
+	html {
+		font-size: 111.112%
+	}
+}
+
+
+//rem布局声明大小 end--->
+
+//开始布局----<start
+
+
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+    // margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
+    font-family: Arial,Helvetica,sans-serif,'Lucida Grande',Verdana;
+    word-wrap: break-word;
+    line-height: 1;
+    color: #333;
+    background: #eaeaea;
+    max-width: 720px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+.index-top{
+    position: relative;
+    height: 2rem;
+}
+.header{
+    height: 2rem;
+    background-color: rgba(255,255,255,0.92);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    max-width: 720px;
+    margin: 0 auto;
+    .logo{
+        position: absolute;
+        height: 100%;
+        a img{
+            height: 100%;
+        }
+    }
+    .search{
+        width: 50%;
+        height: 2rem;
+        padding-left: 4.6rem;
+        margin: 0;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        .swiper-container{
+            width: 100%;
+            height: 1.4rem;
+            background: url(https://res8.vmallres.com/nwap/20180515/images/echannelWap/icon/icon_search.png) no-repeat .4rem center;
+            background-size: .9rem .9rem;
+            background-color: rgba(234,234,234,0.8);
+            border-radius: 0.75rem;
+            margin: 0;
+            overflow: hidden;
+        }
+    }
+}
+.shortcut .icon-home, .shortcut .icon-shoppingCart, .shortcut .icon-personal, .shortcut .icon-filter span, .shortcut .icon-message, .shortcut .icon-header-menu, .shortcut .icon-rule, .shortcut .icon-top-share, .shortcut .icon-share-black {
+    position: relative;
+    padding: .6rem;
+    margin: 0 .3rem;
+    background-size: 1.2rem 1.2rem;
+    background-position: center;
+}
+.icon-personal, .icon-home, .icon-shoppingCart, .icon-filter span, .icon-search, .icon-message, .icon-feedback, .icon-header-menu, .icon-rule, .icon-share-black {
+    display: block;
+    background-position: 50% 50%;
+}
+img{
+    border: 0;
+    max-width: 100%;
+    vertical-align: top;
+    height: auto;
+}
+a,input{
+    background-clip: padding-box;
+}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+    // margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+a{
+    text-decoration: none;
+    color: #333333 ;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.swiper-container{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &>.swiper-wrapper{
+        -webkit-box-orient: vertical;
+        flex-direction: column;
+    }
+}
+.swiper-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+.swiper-slide{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.shortcut{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding-right: .5rem;
+    z-index: 10;
+    margin-top: -0.6rem;
+    -webkit-box-flex: 0;
+    box-flex: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    ul{
+        display:flex;
+    }
+    li{
+        position: relative;
+        text-align: center;
+    }
+    .icon-shoppingCart em{
+        position: absolute;
+        display: none;
+        top: 0;
+        right:  0;
+        background: #ca151e;
+        height: 1em;
+        min-width: .8em;
+        line-height: 1.16;
+        text-decoration: none;
+        color: #fff;
+        font-size: .45em;
+        border-radius: .58em;
+        padding: .08em .18em;
+        i{
+            font-style: normal;
+        }
+    }
+    .icon-login{
+        display: block;
+        margin: 0.3rem .1rem 0 .3rem;
+        span{
+            font-size: .7rem;
+            color: #4c4c4c;
+        }
+    }
+}
+.icon-shoppingCart{
+    background: transparent url(https://res8.vmallres.com/nwap/20180515/images/echannelWap/icon/icon_shoppingCart.png) scroll no-repeat;
+}
+
+//  top__end 头部结束
+
+//轮播图开始
+.pro-gallery{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    height: 7.6rem;
+    li{
+        text-align: center;
+        position: relative;
+    }
+    img{
+        width: 100%;
+    }
+}
+.swiper-container{
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.swiper-wrapper{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+.swiper-slide{
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.quicklink{
+    background-color: #fff;
+    a{
+        display: block;
+        text-align: center;
+        position: relative;
+        padding: .4em .2em;
+        i{
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+        }
+        p{
+            font-size: .55em;
+            color: #333;
+            padding-top: .4545em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+.quicklink ul li{
+    flex: initial;
+    float: left;
+    width: 20%;
+    &:nth-child(5n+1){
+        clear: left;
+    }
+}
+
+// 分类结束
+
+// 一列两个手机 
+.channel-floor-index, .channel-floor-hw, .channel-floor-honor{
+    margin: 0;
+}
+.channel-floor-list2, .channel-floor-list3, .channel-floor-list4 {
+    background-color: #fff;
+    overflow: hidden;
+}
+.channel-floor{
+    margin: .3em 0 0;
+    ul{
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        &>li{
+            width: 50%;
+            position: relative;
+            box-sizing: border-box;
+            &:first-child a{
+                margin: 0 .2em 0 .4em;
+            }
+            &:last-child a{
+                margin: 0 .4em 0 .2em;
+            }
+            img{
+                height: 4.5rem;
+                width: 100%;
+            }
+        }
+    }
+    a{
+        display: block;
+    }
+}
+
+// 手机们 一行两列
+
+.channel-floor-index, .channel-floor-hw, .channel-floor-honor {
+    margin: 0;
+}
+
+.channel-floor-list2, .channel-floor-list3, .channel-floor-list4 {
+    background-color: #fff;
+    overflow: hidden;
+}
+.channel-floor-list2 .p-img img, .channel-floor-list3 .p-img img, .channel-floor-list4 .p-img img, .channel-floor-list2-2 .p-img img, .channel-floor-roll .p-img img {
+    width: 100%;
+    height: 100%;
+}
+.channel-floor{
+    .h{
+        height: 1.5rem;
+        line-height: 1.4rem;
+        text-align: center;
+        overflow: hidden;
+        background: #eaeaea;
+        div{
+            font-size: 1rem;
+            display: inline-block;
+            height: 1px;
+            border-bottom: 1px solid #dcdcdc;
+            padding: 0 1.9rem;
+            margin: .7rem 0 .65rem;
+            h2{
+                color: #888;
+                font-size: .65em;
+                padding: 0 1.15em;
+                white-space: nowrap;
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                background-color: #eaeaea;
+                position: relative;
+                top:-.9em;
+                max-width: 11.5em;
+            }
+        }
+    }
+    ul{
+        width: 100%;
+        display: flex;
+        box-sizing: border-box;
+        &>li{
+            position: relative;
+        }
+    }
+    a{
+        display: block;
+    }
+    .icon-tag{
+        position: absolute;
+        left: 0;
+        top: .2em;
+        height: 1.2rem;
+        width: 1.2rem;
+        overflow: hidden;
+    }
+    .p-promotion{
+        height: 1.1em;
+        color: #bbb;
+    }
+    .p-price b{
+        font-size: .65rem;
+        font-weight: normal;
+        display: block;
+        line-height: 1.2;
+    }
+}
+.channel-floor.channel-floor-list2 .b li {
+    width: 50%;
+}
+.channel-floor.channel-floor-list2 .b li, .channel-floor.channel-floor-list3 .b li, .channel-floor.channel-floor-list4 .b li {
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+}
+
+.channel-floor.channel-floor-list2 a {
+    padding: .4rem .8rem;
+    text-align: center;
+}
+
+.channel-floor-list2 .p-name, .channel-floor-list3 .p-name {
+    line-height: 1.2;
+    padding-top: .15em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.channel-floor-list2 .p-name, .channel-floor-list3 .p-name {
+    line-height: 1.2;
+    padding-top: .15em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.channel-floor-honor .p-price b {
+    color: #00b5e2;
+}
+.channel-floor-list2{
+    .p-img{
+        height: 4.8rem;
+        width: 4.8rem;
+        padding: .4rem 1.3rem;
+        margin: 0 auto;
+        position: relative
+    }
+    .p-name{
+        font-size: .65rem;
+        color: #333;
+    }
+    .p-price{
+        padding-top: .2rem;
+    }
+}
+
+
+//最后一部分 start
+.bottom-area{
+    position: relative;
+    bottom: 0;
+    z-index: 19;
+    width: 100%;
+    background: #fff;
+    margin-top: .4rem;
+    padding: 0 1.1rem;
+    box-sizing: border-box;
+    text-align: center;
+    p.login{
+        margin:  0 auto;
+        padding: .45rem 0;
+        height: 1.5rem;
+        display: inline-block;
+        a{
+            float: left;
+            width: 3.6rem;
+            font-size: .6rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            position: relative;
+        }
+    }
+    p.touch{
+        padding: .8rem 0;
+        height: 2.45rem;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
+        margin-top: -.2rem;
+        a{
+            float: left;
+            margin-left: 3.2rem;
+            i{
+                display: block;
+                height: 1.8rem;
+                width: 1.8rem;
+                background: url(https://res8.vmallres.com/nwap/20180515/images/echannelWap/bg/bg-bottom.png) no-repeat center top;
+                background-size: auto 100%;
+            }
+            span{
+                font-size: .6rem;
+                color:#888;
+                padding-top: 5px;
+            }
+        }
+        a.current span{
+            color: #333;
+        }
+        a:first-child{
+            margin-left: 1.6rem;
+            i{
+                background-position: center left;
+            }
+        }
+        a:last-child i{
+            background-position: center right;
+        }
+    }
+    p.copyright{
+        padding:  .35rem 0 .6rem;
+        line-height: .7rem;
+    }
+}
+.bottom-area p.copyright a, .bottom-area p.copyright span {
+    font-size: .5rem;
+    line-height: 1;
+    color: #333;
+    padding: 0 .4rem 0 .25rem;
+    position: relative;
+}
+.bottom-area p.copyright a:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.25rem;
+    height: .5rem;
+    width: 0;
+    border-right: 1px solid #eaeaea;
+}
